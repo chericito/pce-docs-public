@@ -30,11 +30,11 @@ This page guides you through connecting your platform to PCE’s APIs, handling 
 
 # Feature table
 
-| Feature                      | Description                                                        |
-| ---------------------------- | ------------------------------------------------------------------ |
-| Card Encryption & Tokenization | Securely collect card data in-browser and exchange it for PCE tokens |
-| Webhook Subscription         | Register and confirm endpoints, then receive real-time event payloads |
-| Sandbox Simulator            | Emulate authorizations, captures, refunds, and error scenarios      |
+| Feature                        | Description                                                           |
+| ------------------------------ | --------------------------------------------------------------------- |
+| Card Encryption & Tokenization | Securely collect card data in-browser and exchange it for PCE tokens  |
+| Webhook Subscription           | Register and confirm endpoints, then receive real-time event payloads |
+| Sandbox Simulator              | Emulate authorizations, captures, refunds, and error scenarios        |
 
 # Key details
 

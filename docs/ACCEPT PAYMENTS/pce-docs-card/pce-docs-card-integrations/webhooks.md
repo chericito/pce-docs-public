@@ -137,22 +137,32 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 ## customer.business.create
 
-&#x20;&#x20;
+&#x20;
 
-\{"id": 15140,"eventType": "customer.business.create",
-"eventTimeStamp": "05/13/2025 01:03:00",
-"eventId": "0001709618091430001",
-"eventCreated": 1747098180090,
-
-```
+```json
+[
+    [
+        "{"id": 15140",
+        "eventType: \"customer.business.create\"",
+        "eventTimeStamp: \"05\/13\/2025 01:03:00\"",
+        ""
+    ],
+    [
+        "eventId: \"0001709618091430001\"",
+        ""
+    ],
+    [
+        "eventCreated: 1747098180090",
+        ""
+    ]
+]
 ```
 
 ## customer.jointTendancy.create
 
 &#x20;&#x20;
 
-\{"id": 15140,"eventType": "customer.jointtenancy.create",
-"eventTimeStamp": "05/13/2025 01:03:00",
+\{"id": 15140,"eventType": "customer.jointtenancy.create","eventTimeStamp": "05/13/2025 01:03:00",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -303,8 +313,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 15140,"eventType": "customer.business.update",
-"eventTimeStamp": "05/13/2025 01:03:00",
+\{"id": 15140,"eventType": "customer.business.update","eventTimeStamp": "05/13/2025 01:03:00",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -437,8 +446,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 3013,"eventType": "customer.individual.update",
-"eventTimeStamp": "06/10/2024 19:08:33",
+\{"id": 3013,"eventType": "customer.individual.update","eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -513,8 +521,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 3019,"eventType": "customer.jointtenancy.update",
-"eventTimeStamp": "06/10/2024 19:18:12",
+\{"id": 3019,"eventType": "customer.jointtenancy.update","eventTimeStamp": "06/10/2024 19:18:12",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -651,8 +658,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 15140,"eventType": "account.create",
-"eventTimeStamp": "06/10/2024 19:08:33",
+\{"id": 15140,"eventType": "account.create","eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -734,8 +740,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 15140,"eventType": "account.update",
-"eventTimeStamp": "06/10/2024 19:08:33",
+\{"id": 15140,"eventType": "account.update","eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -817,8 +822,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 66031067,"eventType": "externalaccount.create",
-"eventTimeStamp": "06/10/2024 19:08:33",
+\{"id": 66031067,"eventType": "externalaccount.create","eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -891,8 +895,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 66031073,"eventType": "externalaccount.update",
-"eventTimeStamp": "06/10/2024 19:08:33",
+\{"id": 66031073,"eventType": "externalaccount.update","eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -967,8 +970,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 * **For USD International External Account**
 
-  \{"id": 65819061,"eventType": "internationalexternalaccount.create",
-  "eventTimeStamp": "06/21/2024 06:32:54",
+  \{"id": 65819061,"eventType": "internationalexternalaccount.create","eventTimeStamp": "06/21/2024 06:32:54",
   "eventId": "0001709618091430001",
   "eventCreated": 1747098180090,
   "payload": \[
@@ -1018,8 +1020,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
   * **For non- USD International External Account**
 
-    \{"id": 67856626,"eventType": "internationalexternalaccount.create",
-    "eventTimeStamp": "06/12/2025 06:04:10",
+    \{"id": 67856626,"eventType": "internationalexternalaccount.create","eventTimeStamp": "06/12/2025 06:04:10",
     "eventCreated": 1749708250797,
     "eventId": "0198840000000785690001",
     "payload": \[
@@ -1080,8 +1081,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 * **For USD International External Account**
 
-  \{"id": 65819070,"eventType": "internationalexternalaccount.update",
-  "eventTimeStamp": "06/10/2024 19:08:33",
+  \{"id": 65819070,"eventType": "internationalexternalaccount.update","eventTimeStamp": "06/10/2024 19:08:33",
   "eventId": "0001709618091430001",
   "eventCreated": 1747098180090,
   "payload": \[
@@ -1131,8 +1131,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
   * **For non-USD International External Account**
 
-    \{"id": 67856628,"eventType": "internationalexternalaccount.update",
-    "eventTimeStamp": "06/12/2025 06:04:11",
+    \{"id": 67856628,"eventType": "internationalexternalaccount.update","eventTimeStamp": "06/12/2025 06:04:11",
     "eventCreated": 1749708251318,
     "eventId": "0198840000000838940001",
     "payload": \[
@@ -1191,8 +1190,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65833765,"eventType": "contact.create",
-"eventTimeStamp": "06/10/2024 19:08:33",
+\{"id": 65833765,"eventType": "contact.create","eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -1388,8 +1386,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65833782,"eventType": "contact.update",
-"eventTimeStamp": "06/27/2024 06:58:35",
+\{"id": 65833782,"eventType": "contact.update","eventTimeStamp": "06/27/2024 06:58:35",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -1585,13 +1582,11 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65819811,"eventType": "authorizeduser.create",
-"eventTimeStamp": "06/21/2024 06:52:14",
+\{"id": 65819811,"eventType": "authorizeduser.create","eventTimeStamp": "06/21/2024 06:52:14",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 
-"payload": \[\{"resourceName": "authorizedUser",
-"url": "/v1/customer/id/4225975/authorizedUser/id/53520",
+"payload": \[\{"resourceName": "authorizedUser","url": "/v1/customer/id/4225975/authorizedUser/id/53520",
 "id": 53520,
 "firstName": "Ujjwal",
 "lastName": "Patel",
@@ -1676,13 +1671,11 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65819815,"eventType": "authorizeduser.update",
-"eventTimeStamp": "06/21/2024 06:52:47",
+\{"id": 65819815,"eventType": "authorizeduser.update","eventTimeStamp": "06/21/2024 06:52:47",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 
-"payload": \[\{"resourceName": "authorizedUser",
-"url": "/v1/customer/id/4225975/authorizedUser/id/53520",
+"payload": \[\{"resourceName": "authorizedUser","url": "/v1/customer/id/4225975/authorizedUser/id/53520",
 "id": 53520,
 "firstName": "Ujjwal",
 "lastName": "Patel",
@@ -1767,8 +1760,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816884,"eventType": "mailingaddress.create",
-"eventTimeStamp": "06/21/2024 05:26:29",
+\{"id": 65816884,"eventType": "mailingaddress.create","eventTimeStamp": "06/21/2024 05:26:29",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -1809,8 +1801,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816882,"eventType": "mailingaddress.update",
-"eventTimeStamp": "06/21/2024 05:26:29",
+\{"id": 65816882,"eventType": "mailingaddress.update","eventTimeStamp": "06/21/2024 05:26:29",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -1848,8 +1839,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816896,"eventType": "transaction.ach.create",
-"eventTimeStamp": "06/21/2024 05:34:15",
+\{"id": 65816896,"eventType": "transaction.ach.create","eventTimeStamp": "06/21/2024 05:34:15",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -1912,8 +1902,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816902,"eventType": "transaction.ach.update",
-"eventTimeStamp": "06/21/2024 05:34:44",
+\{"id": 65816902,"eventType": "transaction.ach.update","eventTimeStamp": "06/21/2024 05:34:44",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -1988,8 +1977,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816890,"eventType": "transaction.check.create",
-"eventTimeStamp": "06/21/2024 05:32:22",
+\{"id": 65816890,"eventType": "transaction.check.create","eventTimeStamp": "06/21/2024 05:32:22",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -2083,8 +2071,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816892,"eventType": "transaction.check.update",
-"eventTimeStamp": "06/21/2024 05:32:24",
+\{"id": 65816892,"eventType": "transaction.check.update","eventTimeStamp": "06/21/2024 05:32:24",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -2182,8 +2169,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65818336,"eventType": "transaction.card.create",
-"eventTimeStamp": "06/21/2024 06:23:33",
+\{"id": 65818336,"eventType": "transaction.card.create","eventTimeStamp": "06/21/2024 06:23:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -2310,8 +2296,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65818692,"eventType": "transaction.card.update",
-"eventTimeStamp": "06/21/2024 06:25:38",
+\{"id": 65818692,"eventType": "transaction.card.update","eventTimeStamp": "06/21/2024 06:25:38",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -2438,8 +2423,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65817243,"eventType": "transaction.wire.create",
-"eventTimeStamp": "06/21/2024 05:36:10",
+\{"id": 65817243,"eventType": "transaction.wire.create","eventTimeStamp": "06/21/2024 05:36:10",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -2496,8 +2480,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65818671,"eventType": "transaction.wire.update",
-"eventTimeStamp": "06/21/2024 06:24:55",
+\{"id": 65818671,"eventType": "transaction.wire.update","eventTimeStamp": "06/21/2024 06:24:55",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -2556,8 +2539,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 * **For USD International External Account**
 
-  \{"id": 65819088,"eventType": "transaction.internationalwire.create",
-  "eventTimeStamp": "06/21/2024 06:45:31",
+  \{"id": 65819088,"eventType": "transaction.internationalwire.create","eventTimeStamp": "06/21/2024 06:45:31",
   "eventId": "0001709618091430001",
   "eventCreated": 1747098180090,
   "payload": \[
@@ -2613,8 +2595,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
   * **For non - USD International External Account**
 
-    \{"id": 67863490,"eventType": "transaction.internationalwire.create",
-    "eventId": "0201640000000584310001",
+    \{"id": 67863490,"eventType": "transaction.internationalwire.create","eventId": "0201640000000584310001",
     "payload": \[
     \{
     "statusDate": "06/13/2025 05:14:44",
@@ -2691,8 +2672,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 * **For USD International External Account**
 
-  \{"id": 65819256,"eventType": "transaction.internationalwire.update",
-  "eventTimeStamp": "06/21/2024 06:46:34",
+  \{"id": 65819256,"eventType": "transaction.internationalwire.update","eventTimeStamp": "06/21/2024 06:46:34",
   "eventId": "0001709618091430001",
   "eventCreated": 1747098180090,
   "payload": \[
@@ -2750,8 +2730,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
   * **For non-USD International External Account**
 
-    \{"id": 67863492,"eventType": "transaction.internationalwire.update",
-    "eventId": "0201650000000303880001",
+    \{"id": 67863492,"eventType": "transaction.internationalwire.update","eventId": "0201650000000303880001",
     "payload": \[
     \{
     "statusDate": "06/13/2025 05:14:44",
@@ -2826,8 +2805,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65835612,"eventType": "transaction.book.create",
-"eventTimeStamp": "06/28/2024 11:37:23",
+\{"id": 65835612,"eventType": "transaction.book.create","eventTimeStamp": "06/28/2024 11:37:23",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -2885,8 +2863,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65835625,"eventType": "transaction.book.update",
-"eventTimeStamp": "06/28/2024 11:38:44",
+\{"id": 65835625,"eventType": "transaction.book.update","eventTimeStamp": "06/28/2024 11:38:44",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -2942,8 +2919,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65819444,"eventType": "transaction.virtualcard.create",
-"eventTimeStamp": "06/21/2024 06:48:36",
+\{"id": 65819444,"eventType": "transaction.virtualcard.create","eventTimeStamp": "06/21/2024 06:48:36",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -3000,8 +2976,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65819800,"eventType": "transaction.virtualcard.update",
-"eventTimeStamp": "06/21/2024 06:49:33",
+\{"id": 65819800,"eventType": "transaction.virtualcard.update","eventTimeStamp": "06/21/2024 06:49:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -3059,8 +3034,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-For ACH transaction:\{"id": 67810538,
-"eventCreated": 1748425349095,
+For ACH transaction:\{"id": 67810538,"eventCreated": 1748425349095,
 "eventType": "ledger.create",
 "eventTimeStamp": "05/28/2025 09:42:29",
 "eventId": "0159110000000183330002",
@@ -3143,8 +3117,7 @@ For Debit Card:
 
 For "Expose Debit card sensitive data" setting as TRUE
 
-\{"id": 1363188,"eventType": "debitcard.create",
-"eventTimeStamp": "06/27/2024 09:36:24",
+\{"id": 1363188,"eventType": "debitcard.create","eventTimeStamp": "06/27/2024 09:36:24",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -3195,8 +3168,7 @@ For "Expose Debit card sensitive data" setting as TRUE
 
 For "Expose Debit card sensitive data" setting as FALSE
 
-\{"id": 1368698,"eventType": "debitcard.create",
-"eventTimeStamp": "07/18/2024 05:38:20",
+\{"id": 1368698,"eventType": "debitcard.create","eventTimeStamp": "07/18/2024 05:38:20",
 "payload": \[
 \{
 "resourceName": "debitCard",
@@ -3252,8 +3224,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 1363189,"eventType": "debitcard.update",
-"eventTimeStamp": "06/27/2024 09:46:13",
+\{"id": 1363189,"eventType": "debitcard.update","eventTimeStamp": "06/27/2024 09:46:13",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -3307,8 +3278,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 1368904,"eventType": "moneygram.deposit.initiated",
-"eventTimeStamp": "07/31/2024 12:54:20",
+\{"id": 1368904,"eventType": "moneygram.deposit.initiated","eventTimeStamp": "07/31/2024 12:54:20",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -3326,8 +3296,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 66287814,"eventType": "merchant.directfunded.create",
-"eventTimeStamp": "07/31/2024 12:32:19",
+\{"id": 66287814,"eventType": "merchant.directfunded.create","eventTimeStamp": "07/31/2024 12:32:19",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -3429,8 +3398,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 66287821,"eventType": "merchant.directfunded.update",
-"eventTimeStamp": "07/31/2024 12:33:49",
+\{"id": 66287821,"eventType": "merchant.directfunded.update","eventTimeStamp": "07/31/2024 12:33:49",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -3532,8 +3500,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 66287825,"eventType": "merchant.payfac.create",
-"eventTimeStamp": "07/31/2024 12:37:23",
+\{"id": 66287825,"eventType": "merchant.payfac.create","eventTimeStamp": "07/31/2024 12:37:23",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[
@@ -3616,8 +3583,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 66287837,"eventType": "merchant.payfac.update",
-"eventTimeStamp": "07/31/2024 12:44:41",
+\{"id": 66287837,"eventType": "merchant.payfac.update","eventTimeStamp": "07/31/2024 12:44:41",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 "payload": \[

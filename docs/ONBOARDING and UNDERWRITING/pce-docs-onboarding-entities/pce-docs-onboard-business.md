@@ -10,22 +10,21 @@ metadata:
 next:
   description: ''
 ---
-# Onboarding a Business 
+# Onboarding a Business
 
 A business entity can sign up for <a href="doc:pce-docs-onboard-merchants"> Merchant Services </a> to be able to collect payments online (via paylink) and for Card-present and card-not-present scenario (in-store and online ecommerce). 
 
 The business may decide at the same time or at a later to activate disbursements and pay-outs to vendors.
 
-When Applied:
-Onboarding corporations, LLCs, partnerships, or other legal entities
-Required before enabling accounts or financial services
+When Applied:\
+Onboarding corporations, LLCs, partnerships, or other legal entities\
+Required before enabling accounts or financial services\
 Also triggers KYC for linked individuals (Authorised Users, Beneficial Owners)
 
-To comply with regulatory standards (such as AML, BSA, and card network rules) and to assess business legitimacy, Passport enforces identity verification protocols during onboarding and service enablement. These include:
-KYC (Know Your Customer) - for individuals and sole proprietors
-KYB (Know Your Business) - for companies and business entities
+To comply with regulatory standards (such as AML, BSA, and card network rules) and to assess business legitimacy, Passport enforces identity verification protocols during onboarding and service enablement. These include:\
+KYC (Know Your Customer) - for individuals and sole proprietors\
+KYB (Know Your Business) - for companies and business entities\
 Underwriting - for enabling high-risk or card-based merchant services
-
 
 ### Single Business boarding
 

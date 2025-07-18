@@ -1,5 +1,5 @@
 ---
-title: 'ACH: Risk and Fraud Shield'
+title: 'ACH: Risk and Compliance'
 excerpt: Initiate and manage ACH bank debits with PCE’s secure, compliant API suite.
 deprecated: false
 hidden: false

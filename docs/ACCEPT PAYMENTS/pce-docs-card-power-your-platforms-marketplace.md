@@ -18,9 +18,10 @@ next:
 Enable your marketplace or multi-entity platform to automatically split transaction proceeds among vendors, partners, or internal accounts. PCE’s funding rules engine handles complex payout scenarios so you can focus on growth.
 
 **In this guide you’ll learn**  
-- How to define and manage split-payout rules for any transaction method  
-- The prerequisites and compliance considerations for multi-party disbursements  
-- Where to find the detailed Split Payouts configuration and workflows
+
+* How to define and manage split-payout rules for any transaction method  
+* The prerequisites and compliance considerations for multi-party disbursements  
+* Where to find the detailed Split Payouts configuration and workflows
 
 ### Prerequisites & Limitations
 
@@ -29,12 +30,14 @@ Enable your marketplace or multi-entity platform to automatically split transact
 * AML/KYC checks completed for all payout recipients
 * GDPR adherence for any personal data in payout configurations
 
-# Feature Table  
-| Feature        | Description                                                              |  
-| -------------- | ------------------------------------------------------------------------ |  
-| Split Payouts  | Configure funding rules to automatically distribute transaction funds to multiple accounts |  
+# Feature Table
 
-# Key Details  
+| Feature       | Description                                                                                |
+| ------------- | ------------------------------------------------------------------------------------------ |
+| Split Payouts | Configure funding rules to automatically distribute transaction funds to multiple accounts |
 
-## [Split Payouts](doc:split-payouts)  
+# Key Details
+
+## [Split Payouts](doc:split-payouts)
+
 Define, apply, and manage funding rules that split incoming payments—by method or component—across multiple recipients, with support for overrides, recoupment, and role-based controls.

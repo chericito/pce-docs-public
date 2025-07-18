@@ -74,6 +74,6 @@ Each card network enforces a hold window for authorizations:
 4. Upon shipping or service delivery, merchant sends `capture` request referencing the original auth.
 5. PCE processes the capture and returns a confirmation of the fund transfer.
 
-***
+# Use case
 
-> **Use case:** Cancel or modify orders before capture by issuing a `void` on the authorization if complications arise prior to fund transfer.
+Cancel or modify orders before capture by issuing a `void` on the authorization if complications arise prior to fund transfer.

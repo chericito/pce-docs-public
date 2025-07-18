@@ -12,38 +12,38 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
 Value-added transactions let you append extra charges—like gratuities or service fees—to a base payment. Use these features to streamline tipping, cover incidentals, or support custom billing scenarios.
 
-**In this guide you’ll learn**
-
-* How to add tips during or after authorization
-* Implementation options using authorization adjustments or over-capture
-* Best practices and API considerations
-
-### Prerequisites & Limitations
+### Prerequisites
 
 * Active merchant account with authorization adjustment or over-capture enabled
 * PCI DSS Level 1 compliance for all related operations
+
+### Limitations
+
 * Card network limits on over-capture amounts (typically up to 15–20% above auth)
 
-# Compliance / Regulation Mandates
+### Compliance / Regulation Mandates
 
-* **PCI DSS Level 1**: All value-added transactions—including tips added via adjustments or over-capture—must comply with PCI DSS Level 1 to ensure secure handling of payment data.  
-* **PSD2 Strong Customer Authentication**: In the EU, tipping and service-fee flows require two-factor authentication under PSD2 for customer-initiated charges.  
-* **AML & KYC**: Perform risk-based anti-money laundering controls and customer due diligence before enabling gratuities or service charges.  
-* **GDPR Data Protection**: Any personal data used in tipping functionality must adhere to GDPR principles—data minimization, explicit consent, and secure storage.  
+<Cards columns={4}>
+  <Card title="PCI DSS Level 1" icon="fa-shield-alt">
+    All card data handling—authorization, capture, routing, and tokenization—must comply with PCI DSS Level 1 standards to secure cardholder information.
+  </Card>
 
-# Feature Table
+  <Card title="PSD2 Strong Customer Authentication" icon="fa-mobile-alt">
+    Two-factor authentication under PSD2 is required for EU card payments initiated by customers.
+  </Card>
 
-| Feature | Description                                                                     |
-| ------- | ------------------------------------------------------------------------------- |
-| Tip     | Allow customers to include a gratuity or service charge on top of a transaction |
+  <Card title="AML & KYC" icon="fa-user-check">
+    Implement risk-based anti-money laundering controls and customer due diligence for card transactions, especially high-value or cross-border.
+  </Card>
 
-# Key Details
+  <Card title="GDPR Data Protection" icon="fa-user-shield">
+    Ensure personal and payment data processed in card workflows adheres to GDPR principles, including minimization, consent, and secure handling.
+  </Card>
+</Cards>
 
-## Tip
+# Tips
 
 Enable customers to add a gratuity or service fee alongside their payment.
 
@@ -51,5 +51,3 @@ Enable customers to add a gratuity or service fee alongside their payment.
 
 * **Authorization Adjustment:** After initial auth, send an `adjust-transaction` request to increase the authorized amount by the tip value before capture.
 * **Over-Capture:** When capturing, specify an amount higher than the original auth (within scheme limits) to include tip in a single capture call.
-
-**API Reference:** See the [Create Transaction API’s Card Transactions section](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-create-transaction#a-card-transactions) for details on adjusting and capturing with extra amounts.

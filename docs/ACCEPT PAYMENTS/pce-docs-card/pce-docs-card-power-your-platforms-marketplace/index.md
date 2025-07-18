@@ -19,7 +19,7 @@ Enable your marketplace or multi-entity platform to automatically split transact
 
 * Active merchant or partner account with Split Payouts enabled
 
-### Compliance / Mandates
+### Compliance / Regulation Mandates
 
 <Cards columns={4}>
   <Card title="PCI DSS Level 1" icon="fa-shield-alt">

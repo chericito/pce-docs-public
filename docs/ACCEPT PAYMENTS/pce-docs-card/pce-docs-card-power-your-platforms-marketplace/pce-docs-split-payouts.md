@@ -12,21 +12,13 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
 PCE’s Split Payouts feature lets you define funding rules to distribute transaction proceeds automatically among various accounts—ideal for marketplaces, partners, or multi-entity settlements.
 
-**In this guide you’ll learn**
-
-* How to create and manage funding rules for multiple recipients
-* The methods and boundaries supported for splitting payouts
-* How reversals and recoupment flows work under funding rules
-
-### Prerequisites & Limitations
+### Prerequisites
 
 * Active merchant or partner account with Split Payouts enabled
 
-### Compliance / Mandates
+### Compliance / Regulation Mandates
 
 <Cards columns={4}>
   <Card title="PCI DSS Level 1" icon="fa-shield-alt">
@@ -46,39 +38,29 @@ PCE’s Split Payouts feature lets you define funding rules to distribute transa
   </Card>
 </Cards>
 
-<br />
-
-# Compliance / Regulation Mandates
-
-* **PCI DSS Level 1**: Ensure secure handling of card and account data across split payout workflows.
-* **AML & KYC**: Perform risk-based due diligence and identity verification for each payout recipient.
-* **PSD2 Strong Customer Authentication**: In EU, two-factor authentication is required for funds release in customer-initiated flows.
-* **GDPR Data Protection**: Protect and minimize personal data in payout configurations, obtaining explicit consent where necessary.
-
-# Feature Table
-
-| Feature                 | Description                                                                                                        |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Rules Management        | Define, clone, and enforce funding rules at customer, partner, or PM levels                                        |
-| Supported Methods       | ACH, Card, Check, Wire, and CASH payout splits                                                                     |
-| Active Rules Boundaries | One active rule per transaction method/component per customer (e.g., CARD:TIP and CARD:SURCHARGE allowed together) |
-| Reversals & Recoupment  | Handle chargebacks, refunds, and returns with configurable recoupment flows when splits were applied               |
-
-# Key Details
-
-## Key Features
+# Key Features
 
 * **Intuitive Rule Creation:** End users—whether customers, partners, or program managers—can easily define or clone funding rules directly from their portal dashboards.
 * **Override Hierarchies:** Authoritative entities can lock rules to prevent changes, or allow subordinate levels to adjust cloned rules as needed.
 * **Tag-Based Splitting:** Use transaction metadata tags (e.g., TIP, SURCHARGE, TRUST) to automatically direct portions of a payment to the appropriate accounts.
 
-## Use Cases in Scope
+# Use Cases in Scope
 
-* **Legal Trust Accounting:** Automatically route incoming card payments into “Trust” and “Operational” ledgers by matching tags flagged as TRUST.
-* **Surcharge Allocation:** Divide the surcharge component of a transaction into a separate account designated for fee recovery.
-* **Tip Distribution:** Direct gratuity amounts to individual service provider accounts within PCE.
+<Cards columns={3}>
+  <Card title="Legal Trust Accounting" icon="fa-balance-scale">
+    Automatically route incoming card payments into “Trust” and “Operational” ledgers by matching tags flagged as TRUST.
+  </Card>
 
-## Customer Funding Rule Setup
+  <Card title="Surcharge Allocation" icon="fa-percentage">
+    Divide the surcharge component of a transaction into a separate account designated for fee recovery.
+  </Card>
+
+  <Card title="Tip Distribution" icon="fa-hand-holding-usd">
+    Direct gratuity amounts to individual service provider accounts within PCE.
+  </Card>
+</Cards>
+
+# Customer Funding Rule Setup
 
 1. In the customer portal, click your user initials in the bottom-left corner to open **Funding Rules**.
 2. Select **Add New** to begin rule configuration:
@@ -86,22 +68,22 @@ PCE’s Split Payouts feature lets you define funding rules to distribute transa
    * **Rule Action:** Assign recipient account tags and specify the percentage or fixed amount to split to each account.
 3. Review the **Linked Transactions** list to verify which payments have been processed under this rule.
 
-## Program Manager Funding Rule Management
+# Program Manager Funding Rule Management
 
 Program Managers can establish and oversee rules for their customers and associated partners:
 
 * Navigate to the **Funding Rules** section of the PM portal.
 * Click **Add** to create a new rule, with options to set override permissions and target recipient accounts.
 
-## Configurations
+# Configurations
 
-### Portal Toggles
+## Portal Toggles
 
 * **PM Portal Toggle:** Enable `Show Funding Rule PM Portal` to give program managers access to create and manage rules for their downstream partners and customers.
 * **Partner Portal Toggle:** Enable `Show Funding Rule Partner Portal` to allow partners to configure rules for their linked customers.
 * **Customer Portal Toggle:** Enable `Show Funding Rule Customer Portal` to let customers manage their own funding rules.
 
-## Recouping Funds
+# Recouping Funds
 
 In the event of a reversal (chargeback, refund, or return) on a split transaction:
 
@@ -109,7 +91,7 @@ In the event of a reversal (chargeback, refund, or return) on a split transactio
 2. If additional funds need recoupment, it withdraws from the other split accounts according to the original funding rule.
 3. If internal balances are insufficient, the system pulls the remaining amount from the customer’s external bank account.
 
-## Additional Remarks
+# Additional Remarks
 
 * Access to create or edit funding rules is governed by role-based permissions—only authorized users will see the rule management features.
 * When splitting **CARD** transactions, you can separate by TIP, SURCHARGE, or SUBTOTAL components; for ACH, Cash, Wire, and Check methods, splits apply only to the TOTAL AMOUNT.

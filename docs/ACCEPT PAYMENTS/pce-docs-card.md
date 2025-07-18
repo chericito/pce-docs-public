@@ -30,10 +30,10 @@ Priority’s Commerce Engine (PCE) empowers businesses to accept and manage card
 
 # Compliance / Regulation Mandates
 
-- **PCI DSS Level 1**: All card data handling—authorization, capture, routing, and tokenization—must comply with PCI DSS Level 1 standards to secure cardholder information.  
-- **PSD2 Strong Customer Authentication**: Two-factor authentication under PSD2 is required for EU card payments initiated by customers.  
-- **AML & KYC**: Implement risk-based anti-money laundering controls and customer due diligence for card transactions, especially high-value or cross-border.  
-- **GDPR Data Protection**: Ensure personal and payment data processed in card workflows adheres to GDPR principles, including minimization, consent, and secure handling.
+* **PCI DSS Level 1**: All card data handling—authorization, capture, routing, and tokenization—must comply with PCI DSS Level 1 standards to secure cardholder information.  
+* **PSD2 Strong Customer Authentication**: Two-factor authentication under PSD2 is required for EU card payments initiated by customers.  
+* **AML & KYC**: Implement risk-based anti-money laundering controls and customer due diligence for card transactions, especially high-value or cross-border.  
+* **GDPR Data Protection**: Ensure personal and payment data processed in card workflows adheres to GDPR principles, including minimization, consent, and secure handling.
 
 # Feature Table
 

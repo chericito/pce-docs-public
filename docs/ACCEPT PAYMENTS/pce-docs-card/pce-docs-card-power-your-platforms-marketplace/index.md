@@ -13,31 +13,32 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
 Enable your marketplace or multi-entity platform to automatically split transaction proceeds among vendors, partners, or internal accounts. PCE’s funding rules engine handles complex payout scenarios so you can focus on growth.
-
-**In this guide you’ll learn**
-
-* How to define and manage split-payout rules for any transaction method
-* The prerequisites and compliance considerations for multi-party disbursements
-* Where to find the detailed Split Payouts configuration and workflows
 
 ### Prerequisites & Limitations
 
 * Active merchant or partner account with Split Payouts enabled
-* PCI DSS Level 1 compliance for all payout and split operations
-* AML/KYC checks completed for all payout recipients
-* GDPR adherence for any personal data in payout configurations
 
-# Feature Table
+### Compliance / Mandates
 
-| Feature       | Description                                                                                |
-| ------------- | ------------------------------------------------------------------------------------------ |
-| Split Payouts | Configure funding rules to automatically distribute transaction funds to multiple accounts |
+<Cards columns={4}>
+  <Card title="PCI DSS Level 1" icon="fa-shield-alt">
+    All card data handling—authorization, capture, routing, and tokenization—must comply with PCI DSS Level 1 standards to secure cardholder information.
+  </Card>
 
-# Key Details
+  <Card title="PSD2 Strong Customer Authentication" icon="fa-mobile-alt">
+    Two-factor authentication under PSD2 is required for EU card payments initiated by customers.
+  </Card>
 
-## [Split Payouts](doc:split-payouts)
+  <Card title="AML & KYC" icon="fa-user-check">
+    Implement risk-based anti-money laundering controls and customer due diligence for card transactions, especially high-value or cross-border.
+  </Card>
+
+  <Card title="GDPR Data Protection" icon="fa-user-shield">
+    Ensure personal and payment data processed in card workflows adheres to GDPR principles, including minimization, consent, and secure handling.
+  </Card>
+</Cards>
+
+# [Split Payouts](doc:split-payouts)
 
 Define, apply, and manage funding rules that split incoming payments—by method or component—across multiple recipients, with support for overrides, recoupment, and role-based controls.

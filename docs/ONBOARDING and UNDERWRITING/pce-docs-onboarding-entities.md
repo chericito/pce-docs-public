@@ -20,9 +20,9 @@ Users can save their progress and resume later without losing any data. The flow
 
 Choose the method that fits your customer experience model best.
 
-
+<HTMLBlock>{`
 <style> table.onboarding-compare { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #f0f0f0; border-radius: 8px; overflow: hidden; font-size: 14px; } table.onboarding-compare th, table.onboarding-compare td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #f6f6f6; vertical-align: top; } table.onboarding-compare th { background-color: #fafafa; font-weight: 600; color: #333; } table.onboarding-compare tr:last-child td { border-bottom: none; } </style> <table class="onboarding-compare"> <thead> <tr> <th>Onboarding Method</th> <th>Authentication Required</th> <th>User Experience</th> <th>Integration Effort</th> <th>Use Case Suitability</th> <th>Compliance Support</th> </tr> </thead> <tbody> <tr> <td>MFA (Multi-Factor Auth)</td> <td>Yes</td> <td>Secure, user-verified entry</td> <td>Moderate</td> <td>High-risk or sensitive data onboarding</td> <td>Enhanced security compliance</td> </tr> <tr> <td>Wet Signature</td> <td>Manual identity verification</td> <td>Offline, physical form signing</td> <td>High</td> <td>Legal or high-compliance scenarios requiring physical signature</td> <td>Jurisdiction-specific</td> </tr> <tr> <td>App Engine</td> <td>Depends on configuration</td> <td>Customizable, embedded forms</td> <td>High</td> <td>Tailored onboarding journeys with advanced logic</td> <td>Fully configurable</td> </tr> <tr> <td>🖊️ eSign</td> <td>Yes (email/mobile)</td> <td>Digitally signed document flow</td> <td>Moderate</td> <td>Mid to high-value accounts, regulated industries</td> <td>Compliant with eSignature laws</td> </tr> <tr> <td>Invite for Self Signup</td> <td>Optional (via invite link)</td> <td>Self-service, user-initiated</td> <td>Low</td> <td>Referral flows, marketplaces, partners</td> <td>Optional KYC/AML configurable</td> </tr> <tr> <td>Click Wrap</td> <td>Yes (IP Address and acceptance details)</td> <td>Fast, lightweight flow</td> <td>Low</td> <td>Simple agreements, low-risk onboarding</td> <td>Basic consent capture</td> </tr> </tbody> </table>
-
+`}</HTMLBlock>
 
 # Who Can You Onboard?
 

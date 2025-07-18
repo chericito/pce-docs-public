@@ -64,7 +64,7 @@ Useful for scenarios like e‑commerce shipments or unified commerce across chan
 
 **API Reference:** [Capture Transaction](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-capture-transaction)
 
-## Over Capture
+# Over Capture
 
 Capture an amount slightly higher than the initially authorized value—commonly used for tips, incidentals, or service charges.
 

@@ -22,10 +22,23 @@ The Direct Sale (Immediate Capture) method authorizes and captures funds in one 
 
 ### Compliance / Regulation Mandates
 
-* **PCI DSS Level 1**: All card data captured and processed must comply with PCI DSS Level 1 to ensure cardholder data security.
-* **PSD2 Strong Customer Authentication**: EU direct-sale transactions require two-factor authentication under PSD2 for customer-initiated e-commerce payments.
-* **AML & KYC**: Apply risk-based anti-money laundering controls and KYC checks, especially for high-value or unusual transactions.
-* **GDPR Data Protection**: Adhere to GDPR principles—data minimization, explicit consent, and secure storage—when handling EU citizens’ payment information.
+<Cards columns={4}>
+  <Card title="PCI DSS Level 1" icon="fa-shield-alt">
+    All card data handling—authorization, capture, routing, and tokenization—must comply with PCI DSS Level 1 standards to secure cardholder information.
+  </Card>
+
+  <Card title="PSD2 Strong Customer Authentication" icon="fa-mobile-alt">
+    Two-factor authentication under PSD2 is required for EU card payments initiated by customers.
+  </Card>
+
+  <Card title="AML & KYC" icon="fa-user-check">
+    Implement risk-based anti-money laundering controls and customer due diligence for card transactions, especially high-value or cross-border.
+  </Card>
+
+  <Card title="GDPR Data Protection" icon="fa-user-shield">
+    Ensure personal and payment data processed in card workflows adheres to GDPR principles, including minimization, consent, and secure handling.
+  </Card>
+</Cards>
 
 # Direct Sale (Immediate Capture)
 

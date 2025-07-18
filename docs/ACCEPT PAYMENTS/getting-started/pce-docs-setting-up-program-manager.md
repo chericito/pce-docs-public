@@ -14,7 +14,7 @@ next:
 ---
 This page walks you through the steps a Program Manager needs to take to get started with PCE: from requesting a sandbox account to managing access and sharing resources.
 
-### Prerequisites & Limitations
+### Prerequisites
 
 * You must have a Program Manager or Partner-level role authorized to request sandbox access.
 * A secure email channel for sharing temporary credentials and API keys.

@@ -12,15 +12,7 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
 This page walks you through the steps a Program Manager needs to take to get started with PCE: from requesting a sandbox account to managing access and sharing resources.
-
-**In this guide you’ll learn**
-
-* How to request and receive your PCE sandbox credentials
-* Best practices for onboarding and inviting team members
-* Where to find API documentation and supporting materials
 
 ### Prerequisites & Limitations
 
@@ -28,9 +20,7 @@ This page walks you through the steps a Program Manager needs to take to get sta
 * A secure email channel for sharing temporary credentials and API keys.
 * Adherence to your organization’s security policies for credential storage and rotation.
 
-# Key Details
-
-## Request a New PCE Sandbox Account
+# Request a New PCE Sandbox Account
 
 1. Email the PCE Support/Implementation team at **[support@passportpayments.com](mailto:support@passportpayments.com)**
 2. Use the subject line:
@@ -46,7 +36,7 @@ This page walks you through the steps a Program Manager needs to take to get sta
 
 The Account Management team will then provision your sandbox and reach out with next steps.
 
-## Receive and Secure Your Credentials
+# Receive and Secure Your Credentials
 
 Once your request is approved, you’ll receive:
 
@@ -57,7 +47,7 @@ Once your request is approved, you’ll receive:
 
 > **Tip:** Store these securely (e.g., in a secrets manager) and rotate passwords/API keys if they’re shared across multiple users.
 
-## Share Access with Your Team
+# Share Access with Your Team
 
 1. Log in to the PCE Sandbox Portal.
 2. Go to **Settings → User Management → Add**.
@@ -71,7 +61,7 @@ Once your request is approved, you’ll receive:
 
 > **Optional:** For each API User, you can generate unique API keys by contacting your Admin team.
 
-## Supporting Materials
+# Supporting Materials
 
 * **PCE API Documentation**: Comprehensive reference for all endpoints
 * **Sample Postman Collection**: Ready-to-use requests for rapid testing

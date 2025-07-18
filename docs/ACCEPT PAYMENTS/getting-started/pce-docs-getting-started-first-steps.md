@@ -47,7 +47,7 @@ To get started:
 * **Mandatory Header:** Every request must include `Authorization: Bearer <token>`.
 * **Rate Limits:** 1,000 requests per 10 seconds. Exceeding this returns a `429 Too Many Requests` and drops further calls until the window resets.
 
-## Working with the API
+# Working with the API
 
 *All figures and data in this document are representational. Contact your PCE representative for access to production data.*
 
@@ -59,14 +59,14 @@ Every request must include the Bearer token in the `Authorization` header:
 Authorization: Bearer <JWT token>
 ```
 
-### Create Entities
+## Create Entities
 
 Use **HTTP POST** to create any entity.
 
 * **Success:** `201 Created`
 * **Response Header:** `Location: /v1/{entity}/{id}`
 
-### Update Entities
+## Update Entities
 
 Use **HTTP POST** to update an existing entity.
 
@@ -77,7 +77,7 @@ Use **HTTP POST** to update an existing entity.
   2. To delete a non-mandatory field, pass its value as `null`.
   3. To remove an associated object, use the delink API endpoint.
 
-### Retrieve Entities
+## Retrieve Entities
 
 Use **HTTP GET** to fetch an entity by its system‐assigned ID or by its `externalId`.
 
@@ -85,7 +85,7 @@ Use **HTTP GET** to fetch an entity by its system‐assigned ID or by its `exter
 * System fields like `createdOn`, `createdBy`, `lastUpdatedOn`, and `lastUpdatedBy` are always included.
 * Any associations are returned as objects containing only their URLs—you must invoke additional GET calls to retrieve their details.
 
-### List Entities
+## List Entities
 
 All “list” operations use **HTTP POST** to ensure secure transmission of sensitive data. Bulk-fetch top-level resources (e.g., customers, transactions) with filters, sorting, and pagination.
 
@@ -94,36 +94,32 @@ All “list” operations use **HTTP POST** to ensure secure transmission of sen
 * **Response:** Returns matching records plus metadata (`totalCount`, `returnedCount`, `offset`).
 * **Data Lag:** List APIs may lag by up to 30 minutes.
 
-#### Table 1: List Response Attributes
+### List Response Attributes
 
-| Field      | Required | Description                                     |
-| ---------- | :------: | ----------------------------------------------- |
-| `criteria` |    Yes   | List of filters applied in this list operation. |
-| `filter`   |    Yes   | A single filter definition:                     |
+| Parameter       | Required | Description                                                                                                                                                                                     |
+| --------------- | :------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `criteria`      |    Yes   | List of filters applied in this list operation.                                                                                                                                                 |
+| `filter`        |    Yes   | A single filter definition: **key**: the field name to filter on • **operator**: one of `eq`, `ne`, `lt`, `gt`, `lte`, `gte`, `in`, `like` • **values**: comma-separated list of filter values. |
+| `sortOptions`   |    No    | Controls ordering of results.                                                                                                                                                                   |
+| `sortBy`        |    Yes   | Field name to sort on.                                                                                                                                                                          |
+| `sortOrder`     |    No    | Sorting direction: `ASC` or `DESC`.                                                                                                                                                             |
+| `limit`         |    No    | Max number of records to return (1 – 100). Default: 100.                                                                                                                                        |
+| `offset`        |    No    | ID of the last record returned in the previous call. Requires sorting by ID.                                                                                                                    |
+| `pageSize`      |    No    | Records per page. Default: 100.                                                                                                                                                                 |
+| `pageNumber`    |    No    | Page number to retrieve.                                                                                                                                                                        |
+| `getTotalCount` |    No    | Include the total count of records matching the filters. To use, set to `true` and pass `lastUpdatedOn`, `startDate`, and `endDate` (max range 90 days). Default: `false`.                      |
 
-* **key**: the field name to filter on
-* **operator**: one of `eq`, `ne`, `lt`, `gt`, `lte`, `gte`, `in`, `like`
-* **values**: comma-separated list of filter values  |\
-  \| `sortOptions`   |    No    | Controls ordering of results.                                                                                                                                                                              |
-  \| `sortBy`        |   Yes    | Field name to sort on.                                                                                                                                                                                     |
-  \| `sortOrder`     |    No    | Sorting direction: `ASC` or `DESC`.                                                                                                                                                                        |
-  \| `limit`         |    No    | Max number of records to return (1–100). Default: 100.                                                                                                                                                     |
-  \| `offset`        |    No    | ID of the last record returned in the previous call. Requires sorting by ID.                                                                                                                               |
-  \| `pageSize`      |    No    | Records per page. Default: 100.                                                                                                                                                                            |
-  \| `pageNumber`    |    No    | Page number to retrieve.                                                                                                                                                                                   |
-  \| `getTotalCount` |    No    | Include the total count of records matching the filters. To use, set to `true` and pass `lastUpdatedOn`, `startDate`, and `endDate` (max range 90 days). Default: false.                                  |
-
-### `metaData` Attribute
+## `metaData` Attribute
 
 Each entity supports a free-form `metaData` map of up to 20 key–value pairs. This is ideal for partner IDs or other structured data.
 
 > **Do not** store sensitive information (e.g. account numbers, card details) in metadata.
 
-### `tags` Attribute
+## `tags` Attribute
 
 Entities can be labeled with one or more text tags to facilitate grouping and search. You can later retrieve all entities that share a given tag.
 
-### Authorization Documents
+## Authorization Documents
 
 Most entities require supporting documents (e.g., SPAA for KYC, debit authorizations). Two upload methods are supported:
 
@@ -156,13 +152,13 @@ The API supports pagination using four parameters: `pageSize`, `pageNumber`, `li
 2. If only `limit` is provided, it governs the size of the result set, regardless of other parameters.
 3. If none are provided, the API defaults to `pageSize=1000` and `pageNumber=1`.
 
-## Errors & Warnings
+# Errors & Warnings
 
 PCE uses standard HTTP response codes and structured API error codes to indicate the outcome of each request.
 
 ***
 
-### HTTP Status Codes
+## HTTP Status Codes
 
 | Code | Description                                                                                       |
 | ---- | ------------------------------------------------------------------------------------------------- |
@@ -182,7 +178,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 
 ***
 
-### API Error Code Categories
+## API Error Code Categories
 
 | Category     | Description                                            |
 | ------------ | ------------------------------------------------------ |
@@ -192,7 +188,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 
 ***
 
-### Authorization Error Codes
+## Authorization Error Codes
 
 | Code             | Message                                                               |
 | ---------------- | --------------------------------------------------------------------- |
@@ -200,7 +196,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 
 ***
 
-### Header Validation Error Codes
+## Header Validation Error Codes
 
 | Code           | Message                               |
 | -------------- | ------------------------------------- |
@@ -209,7 +205,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 
 ***
 
-### User Verification & Security Validation Errors
+## User Verification & Security Validation Errors
 
 | Code           | Message                                                     |
 | -------------- | ----------------------------------------------------------- |
@@ -218,7 +214,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 
 ***
 
-### API Validation Error Codes
+## API Validation Error Codes
 
 | Code           | Message                                      |
 | -------------- | -------------------------------------------- |
@@ -232,9 +228,6 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 
 ***
 
-### Warning Messages
+## Warning Messages
 
 PCE may return HTTP 299 with warning headers to convey non-blocking issues or deprecations. Inspect the `Warning` response header for details and recommended actions.
-
-```
-```

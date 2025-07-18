@@ -13,28 +13,38 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
 The Separate Authorization & Capture workflow lets you verify payment details and reserve funds at the time of order, then capture those funds later—ideal for delayed fulfillment, pre-orders, or conditional services.
 
-**In this guide you’ll learn**
-
-* How to perform and manage separate auth and capture flows
-* Card-scheme validity windows and capture timing
-* Differences between automatic and manual capture modes
-
-### Prerequisites & Limitations
+### Prerequisites
 
 * Active merchant account with card processing enabled
 * PCI DSS Level 1 compliance
+
+### Limitations
+
 * Capture must occur within card-scheme authorization windows (e.g., Visa/MC: 7–10 days)
 
 # Compliance / Regulation Mandates
 
-* **PCI DSS Level 1**: Ensure all authorization and capture operations comply with PCI DSS Level 1 standards to protect cardholder data.  
-* **PSD2 Strong Customer Authentication**: EU authorizations require two-factor authentication under PSD2 for customer-initiated payments.  
-* **AML & KYC**: Apply risk-based anti-money laundering controls and customer due diligence before placing or capturing holds on funds.  
-* **GDPR Data Protection**: Adhere to GDPR principles—data minimization, explicit consent, and secure handling—when processing EU citizens’ payment information.  
+<Cards columns={4}>
+  <Card title="PCI DSS Level 1" icon="fa-shield-alt">
+    All card data handling—authorization, capture, routing, and tokenization—must comply with PCI DSS Level 1 standards to secure cardholder information.
+  </Card>
+
+  <Card title="PSD2 Strong Customer Authentication" icon="fa-mobile-alt">
+    Two-factor authentication under PSD2 is required for EU card payments initiated by customers.
+  </Card>
+
+  <Card title="AML & KYC" icon="fa-user-check">
+    Implement risk-based anti-money laundering controls and customer due diligence for card transactions, especially high-value or cross-border.
+  </Card>
+
+  <Card title="GDPR Data Protection" icon="fa-user-shield">
+    Ensure personal and payment data processed in card workflows adheres to GDPR principles, including minimization, consent, and secure handling.
+  </Card>
+</Cards>
+
+<br />
 
 # Feature Table
 

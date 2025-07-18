@@ -31,9 +31,9 @@ Every ACH entry must be classified with a three-letter Standard Entry Class (SEC
 
 # Compliance / Regulation Mandates
 
-* **Nacha Operating Rules**
+* **Nacha Operating Rules**\
   Every ACH entry must use the correct SEC code and follow its specific authorization, data, and return requirements.
-* **Regulation E**
+* **Regulation E**\
   Provides consumer rights and error-resolution procedures for electronic fund transfers.
 * **Authorization & Record-Keeping**
 

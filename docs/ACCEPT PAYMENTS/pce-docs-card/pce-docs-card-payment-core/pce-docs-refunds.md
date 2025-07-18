@@ -12,29 +12,36 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+`PCE` supports two refund workflows: **Sale Referenced Refunds**, which link directly to an original transaction for maximum security and reconciliation, and **Adhoc Refunds**, which act as standalone payouts when no original reference exists. This page details when and how to use each method, plus guidelines for full and partial refund operations.
 
-PCE supports two refund workflows: **Sale Referenced Refunds**, which link directly to an original transaction for maximum security and reconciliation, and **Adhoc Refunds**, which act as standalone payouts when no original reference exists. This page details when and how to use each method, plus guidelines for full and partial refund operations.
-
-**In this guide you’ll learn**
-
-* The difference between sale-referenced and adhoc refunds
-* Use cases for full versus partial refunds
-* Validation rules to ensure compliant refund requests
-
-### Prerequisites & Limitations
+### Prerequisites
 
 * Merchant account with refund permissions
 * PCI DSS Level 1 compliance for linked refunds
 * Adhoc refunds require explicit activation and KYC checks
 * Sale referenced refunds need a valid original transaction reference
 
-# Compliance / Regulation Mandates
+### Compliance / Regulation Mandates
 
-* **PCI DSS Level 1**: All refund operations must adhere to PCI DSS Level 1 standards to ensure secure handling of cardholder data.  
-* **PSD2 Strong Customer Authentication**: EU refunds linked to consumer-initiated transactions require two-factor authentication under PSD2.  
-* **AML & KYC**: Perform risk-based anti-money laundering checks and customer due diligence before processing high-value or non-referenced refunds.  
-* **GDPR Data Protection**: Ensure personal and payment data used in refund workflows complies with GDPR principles, including data minimization and explicit consent.  
+<Cards columns={4}>
+  <Card title="PCI DSS Level 1" icon="fa-shield-alt">
+    All card data handling—authorization, capture, routing, and tokenization—must comply with PCI DSS Level 1 standards to secure cardholder information.
+  </Card>
+
+  <Card title="PSD2 Strong Customer Authentication" icon="fa-mobile-alt">
+    Two-factor authentication under PSD2 is required for EU card payments initiated by customers.
+  </Card>
+
+  <Card title="AML & KYC" icon="fa-user-check">
+    Implement risk-based anti-money laundering controls and customer due diligence for card transactions, especially high-value or cross-border.
+  </Card>
+
+  <Card title="GDPR Data Protection" icon="fa-user-shield">
+    Ensure personal and payment data processed in card workflows adheres to GDPR principles, including minimization, consent, and secure handling.
+  </Card>
+</Cards>
+
+<br />
 
 # Feature Table
 

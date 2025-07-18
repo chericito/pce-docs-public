@@ -43,9 +43,7 @@ Explore PCE’s authorization management toolkit, offering incremental auth, voi
   </Card>
 </Cards>
 
-# Key Details
-
-## Incremental Authorization
+# Incremental Authorization
 
 Increase the authorized amount on an existing transaction before it’s captured, ensuring coverage for additional costs.
 
@@ -61,7 +59,7 @@ Increase the authorized amount on an existing transaction before it’s captured
 3. Another Incremental Auth: Guest incurs $25 breakfast; request additional $25 (total $375).
 4. Capture: At checkout, capture final amount of $375.
 
-## Void Authorization
+# Void Authorization
 
 Cancel an existing authorization that hasn’t been captured to release held funds and avoid unnecessary fees.
 
@@ -80,7 +78,7 @@ Cancel an existing authorization that hasn’t been captured to release held fun
 * [Void Transaction](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-void-transaction)
 * [Void Capture](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-capture-transaction#e-void-capture)
 
-## Authorization Adjustments
+# Authorization Adjustments
 
 Adjust an existing authorization amount—either up or down—before capture to correct or finalize charges.
 

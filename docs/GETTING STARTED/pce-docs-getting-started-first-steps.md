@@ -12,21 +12,22 @@ metadata:
 next:
   description: ''
 ---
+````markdown
 # Overview
 
 This page guides you through the initial steps to call PCE Sandbox APIs: from authentication to basic CRUD and listing workflows.
 
 **In this guide you’ll learn**
 
-* How to authenticate using a Bearer token
-* The standard patterns for creating, updating, retrieving, and listing entities
-* Best practices around pagination and error handling
+- How to authenticate using a Bearer token  
+- The standard patterns for creating, updating, retrieving, and listing entities  
+- Best practices around pagination and error handling  
 
 ### Prerequisites & Limitations
 
-* A provisioned PCE Sandbox account with valid API‐User credentials
-* All API calls must be made over HTTPS; HTTP is not supported
-* API rate limit: 1000 requests per 10 seconds (exceeding this returns 429)
+- A provisioned PCE Sandbox account with valid API‐User credentials  
+- All API calls must be made over HTTPS; HTTP is not supported  
+- API rate limit: 1000 requests per 10 seconds (exceeding this returns 429)  
 
 # Key Details
 
@@ -39,7 +40,7 @@ GET /v1/customer HTTP/1.1
 Host: api.sandbox.pce.example.com
 Authorization: Bearer abc123xyz
 Content-Type: application/json
-```
+````
 
 To get started:
 
@@ -103,18 +104,22 @@ All “list” operations use **HTTP POST** to ensure secure transmission of sen
 
 #### Table 1: List Response Attributes
 
-| Field           | Required | Description                                                                                                                                                                                               |
-| --------------- | :------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `criteria`      |    Yes   | List of filters applied in this list operation.                                                                                                                                                           |
-| `filter`        |    Yes   | A single filter definition:<br>• **key**: the field name to filter on<br>• **operator**: one of `eq`, `ne`, `lt`, `gt`, `lte`, `gte`, `in`, `like`<br>• **values**: comma-separated list of filter values |
-| `sortOptions`   |    No    | Controls ordering of results.                                                                                                                                                                             |
-| `sortBy`        |    Yes   | Field name to sort on.                                                                                                                                                                                    |
-| `sortOrder`     |    No    | Sorting direction: `ASC` or `DESC`.                                                                                                                                                                       |
-| `limit`         |    No    | Max number of records to return (1–100). Default: 100.                                                                                                                                                    |
-| `offset`        |    No    | ID of the last record returned in the previous call. Requires sorting by ID.                                                                                                                              |
-| `pageSize`      |    No    | Records per page. Default: 100.                                                                                                                                                                           |
-| `pageNumber`    |    No    | Page number to retrieve.                                                                                                                                                                                  |
-| `getTotalCount` |    No    | Include the total count of records matching the filters. To use, set to `true` and pass `lastUpdatedOn`, `startDate`, and `endDate` (max range 90 days). Default: false.                                  |
+| Field      | Required | Description                                     |
+| ---------- | :------: | ----------------------------------------------- |
+| `criteria` |    Yes   | List of filters applied in this list operation. |
+| `filter`   |    Yes   | A single filter definition:                     |
+
+* **key**: the field name to filter on
+* **operator**: one of `eq`, `ne`, `lt`, `gt`, `lte`, `gte`, `in`, `like`
+* **values**: comma-separated list of filter values  |
+  \| `sortOptions`   |    No    | Controls ordering of results.                                                                                                                                                                              |
+  \| `sortBy`        |   Yes    | Field name to sort on.                                                                                                                                                                                     |
+  \| `sortOrder`     |    No    | Sorting direction: `ASC` or `DESC`.                                                                                                                                                                        |
+  \| `limit`         |    No    | Max number of records to return (1–100). Default: 100.                                                                                                                                                     |
+  \| `offset`        |    No    | ID of the last record returned in the previous call. Requires sorting by ID.                                                                                                                               |
+  \| `pageSize`      |    No    | Records per page. Default: 100.                                                                                                                                                                            |
+  \| `pageNumber`    |    No    | Page number to retrieve.                                                                                                                                                                                   |
+  \| `getTotalCount` |    No    | Include the total count of records matching the filters. To use, set to `true` and pass `lastUpdatedOn`, `startDate`, and `endDate` (max range 90 days). Default: false.                                  |
 
 ### `metaData` Attribute
 
@@ -137,20 +142,20 @@ Most entities require supporting documents (e.g., SPAA for KYC, debit authorizat
 
 The API supports pagination using four parameters: `pageSize`, `pageNumber`, `limit`, and `offset`. All are optional—if none are provided, `pageSize` and `pageNumber` will control the result set.
 
-* **pageNumber**\
-  Default: `1`\
+* **pageNumber**
+  Default: `1`
   Specifies which “page” of results to return.
 
-* **pageSize**\
-  Default: `1000` (maximum `1000`)\
+* **pageSize**
+  Default: `1000` (maximum `1000`)
   Number of records per page.
 
-* **limit**\
-  Default: `100` (maximum `100`)\
+* **limit**
+  Default: `100` (maximum `100`)
   If specified without `pageNumber`/`pageSize`/`offset`, controls the total records returned.
 
-* **offset**\
-  An entity ID indicating where to start the next page of results.\
+* **offset**
+  An entity ID indicating where to start the next page of results.
   Requires sorting by the ID field.
 
 **Precedence rules**
@@ -163,7 +168,7 @@ The API supports pagination using four parameters: `pageSize`, `pageNumber`, `li
 
 PCE uses standard HTTP response codes and structured API error codes to indicate the outcome of each request.
 
-***
+---
 
 ### HTTP Status Codes
 
@@ -183,7 +188,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | 429  | Too Many Requests – Rate limit exceeded; “Retry-After” header may indicate when to retry          |
 | 5xx  | Server Error – Unexpected problem on PCE’s servers                                                |
 
-***
+---
 
 ### API Error Code Categories
 
@@ -193,7 +198,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | EC-VA-XXXX   | Validation errors (e.g. missing or invalid parameters) |
 | EC-BL-XXXX   | Business logic errors (entity-specific rules)          |
 
-***
+---
 
 ### Authorization Error Codes
 
@@ -201,7 +206,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | ---------------- | --------------------------------------------------------------------- |
 | **EC-AUTH-0001** | User authorization attempt failed. User needs to confirm credentials. |
 
-***
+---
 
 ### Header Validation Error Codes
 
@@ -210,7 +215,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | **EC-VA-0001** | Missing header parameter: `[object]`. |
 | **EC-VA-0002** | Invalid header parameter: `[object]`. |
 
-***
+---
 
 ### User Verification & Security Validation Errors
 
@@ -219,7 +224,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | **EC-VA-0106** | Three security questions are required.                      |
 | **EC-VA-0107** | At least one of new password or security question required. |
 
-***
+---
 
 ### API Validation Error Codes
 
@@ -233,8 +238,11 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 
 > **Note:** Business-Logic errors (`EC-BL-XXXX`) are entity-specific and documented under each entity’s “Business Validations” section.
 
-***
+---
 
 ### Warning Messages
 
 PCE may return HTTP 299 with warning headers to convey non-blocking issues or deprecations. Inspect the `Warning` response header for details and recommended actions.
+
+```
+```

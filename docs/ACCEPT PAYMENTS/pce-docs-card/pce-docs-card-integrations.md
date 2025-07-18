@@ -1,5 +1,5 @@
 ---
-title: 'Card: Integrations'
+title: Integrations
 excerpt: >-
   Integrate with PCE’s powerful APIs—from secure card tokenization and real-time
   webhooks to sandbox simulation—for seamless payment workflows.

@@ -1,5 +1,8 @@
 ---
 title: Integration Methods
+excerpt: >-
+  Choose between direct API integration or secure client-side encryption with
+  PCE’s JavaScript SDK for your payment flows.
 deprecated: false
 hidden: false
 metadata:

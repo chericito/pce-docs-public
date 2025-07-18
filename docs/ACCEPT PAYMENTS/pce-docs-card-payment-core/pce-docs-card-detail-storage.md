@@ -31,10 +31,10 @@ Card Detail Storage lets you securely save customer payment information in a PCI
 
 # Compliance / Regulation Mandates
 
-- **PCI DSS Level 1**: Ensure all tokenization and storage processes obey PCI DSS Level 1 requirements to protect cardholder data.  
-- **PSD2 Strong Customer Authentication**: Apply two-factor authentication for saving and using payment details in EU e-commerce scenarios.  
-- **AML & KYC**: Follow risk-based Anti-Money Laundering and Know Your Customer guidelines when onboarding tokenized payment methods.  
-- **GDPR Data Protection**: Comply with GDPR mandates on data minimization, explicit consent, and secure storage for EU citizens’ payment information.  
+* **PCI DSS Level 1**: Ensure all tokenization and storage processes obey PCI DSS Level 1 requirements to protect cardholder data.  
+* **PSD2 Strong Customer Authentication**: Apply two-factor authentication for saving and using payment details in EU e-commerce scenarios.  
+* **AML & KYC**: Follow risk-based Anti-Money Laundering and Know Your Customer guidelines when onboarding tokenized payment methods.  
+* **GDPR Data Protection**: Comply with GDPR mandates on data minimization, explicit consent, and secure storage for EU citizens’ payment information.  
 
 # Feature Table
 
@@ -62,5 +62,5 @@ We refer to saved payment details as **tokens**, and the process as **tokenizati
 * SaaS and membership billing with recurring charges.
 * Prepaid account reloads or wallet top-ups without re-entering card data.
 
-**API Reference:** Refer to the tokenization section in the Appendix of the API guide:
+**API Reference:** Refer to the tokenization section in the Appendix of the API guide:\
 [Card Tokenization API](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-card-tokenization)

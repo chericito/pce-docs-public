@@ -59,8 +59,6 @@ Securely tokenize and vault customer payment details to enable subscriptions, to
 
 # Card Transaction Status Lifecycle
 
-Refer to the [Card Transaction Statuses & Reasons API guide](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-transaction#1132-card-transaction-statuses--status-reasons) for full details.
-
 | Status              | Description                                                                                                       |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | UNCAPTURED          | Default state after authorization.                                                                                |

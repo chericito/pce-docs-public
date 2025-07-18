@@ -12,23 +12,18 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
 This page provides a complete reference for every PCE entity—such as Customer, Account, Transaction, and more—and details the Create, Retrieve, Update, Delete, and specialty actions supported on each. Use this guide to plan your integration flows, automate workflows, and understand the full surface area of the PCE API.
 
-**In this guide you’ll learn**
-
-* The core PCE entities and their business roles
-* Which CRUD and advanced operations each entity supports
-* How to leverage these operations in your integration and automation
-
-### Prerequisites & Limitations
+### Prerequisites
 
 * A PCE sandbox account with valid API credentials
 * Appropriate API role permissions for entity operations
-* Adherence to the rate limit (1,000 requests per 10 seconds) to avoid throttling
 
-# Key Details
+### Limitations
+
+Adherence to the rate limit (1,000 requests per 10 seconds) to avoid throttling
+
+# List of Entities and Operations
 
 | Entity                             | Description                                                                                    | Operations Available                                                                                                        |
 | ---------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |

@@ -54,7 +54,6 @@ To get started:
 * **Mandatory Header:** Every request must include `Authorization: Bearer <token>`.
 * **Rate Limits:** 1,000 requests per 10 seconds. Exceeding this returns a `429 Too Many Requests` and drops further calls until the window resets.
 
-
 ## Working with the API
 
 *All figures and data in this document are representational. Contact your PCE representative for access to production data.*
@@ -138,20 +137,20 @@ Most entities require supporting documents (e.g., SPAA for KYC, debit authorizat
 
 The API supports pagination using four parameters: `pageSize`, `pageNumber`, `limit`, and `offset`. All are optional—if none are provided, `pageSize` and `pageNumber` will control the result set.
 
-* **pageNumber**
-  Default: `1`
+* **pageNumber**\
+  Default: `1`\
   Specifies which “page” of results to return.
 
-* **pageSize**
-  Default: `1000` (maximum `1000`)
+* **pageSize**\
+  Default: `1000` (maximum `1000`)\
   Number of records per page.
 
-* **limit**
-  Default: `100` (maximum `100`)
+* **limit**\
+  Default: `100` (maximum `100`)\
   If specified without `pageNumber`/`pageSize`/`offset`, controls the total records returned.
 
-* **offset**
-  An entity ID indicating where to start the next page of results.
+* **offset**\
+  An entity ID indicating where to start the next page of results.\
   Requires sorting by the ID field.
 
 **Precedence rules**
@@ -164,7 +163,7 @@ The API supports pagination using four parameters: `pageSize`, `pageNumber`, `li
 
 PCE uses standard HTTP response codes and structured API error codes to indicate the outcome of each request.
 
----
+***
 
 ### HTTP Status Codes
 
@@ -184,7 +183,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | 429  | Too Many Requests – Rate limit exceeded; “Retry-After” header may indicate when to retry          |
 | 5xx  | Server Error – Unexpected problem on PCE’s servers                                                |
 
----
+***
 
 ### API Error Code Categories
 
@@ -194,7 +193,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | EC-VA-XXXX   | Validation errors (e.g. missing or invalid parameters) |
 | EC-BL-XXXX   | Business logic errors (entity-specific rules)          |
 
----
+***
 
 ### Authorization Error Codes
 
@@ -202,7 +201,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | ---------------- | --------------------------------------------------------------------- |
 | **EC-AUTH-0001** | User authorization attempt failed. User needs to confirm credentials. |
 
----
+***
 
 ### Header Validation Error Codes
 
@@ -211,7 +210,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | **EC-VA-0001** | Missing header parameter: `[object]`. |
 | **EC-VA-0002** | Invalid header parameter: `[object]`. |
 
----
+***
 
 ### User Verification & Security Validation Errors
 
@@ -220,7 +219,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | **EC-VA-0106** | Three security questions are required.                      |
 | **EC-VA-0107** | At least one of new password or security question required. |
 
----
+***
 
 ### API Validation Error Codes
 
@@ -234,7 +233,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 
 > **Note:** Business-Logic errors (`EC-BL-XXXX`) are entity-specific and documented under each entity’s “Business Validations” section.
 
----
+***
 
 ### Warning Messages
 

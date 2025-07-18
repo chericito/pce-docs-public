@@ -12,26 +12,16 @@ metadata:
 next:
   description: ''
 ---
-````markdown
-# Overview
-
 This page guides you through the initial steps to call PCE Sandbox APIs: from authentication to basic CRUD and listing workflows.
 
-**In this guide you’ll learn**
-
-- How to authenticate using a Bearer token  
-- The standard patterns for creating, updating, retrieving, and listing entities  
-- Best practices around pagination and error handling  
-
-### Prerequisites & Limitations
-
+### Prerequisites
 - A provisioned PCE Sandbox account with valid API‐User credentials  
-- All API calls must be made over HTTPS; HTTP is not supported  
-- API rate limit: 1000 requests per 10 seconds (exceeding this returns 429)  
 
-# Key Details
+### Limitations
+- API rate limit: 1000 requests per 10 seconds (exceeding this returns 429)
+- All API calls must be made over HTTPS; HTTP is not supported
 
-## Authentication
+# Authentication
 
 All PCE Sandbox API requests must include a valid Bearer token in the `Authorization` header over HTTPS. Requests without authentication or made over plain HTTP will be rejected.
 
@@ -111,7 +101,7 @@ All “list” operations use **HTTP POST** to ensure secure transmission of sen
 
 * **key**: the field name to filter on
 * **operator**: one of `eq`, `ne`, `lt`, `gt`, `lte`, `gte`, `in`, `like`
-* **values**: comma-separated list of filter values  |
+* **values**: comma-separated list of filter values  |\
   \| `sortOptions`   |    No    | Controls ordering of results.                                                                                                                                                                              |
   \| `sortBy`        |   Yes    | Field name to sort on.                                                                                                                                                                                     |
   \| `sortOrder`     |    No    | Sorting direction: `ASC` or `DESC`.                                                                                                                                                                        |
@@ -142,19 +132,19 @@ Most entities require supporting documents (e.g., SPAA for KYC, debit authorizat
 
 The API supports pagination using four parameters: `pageSize`, `pageNumber`, `limit`, and `offset`. All are optional—if none are provided, `pageSize` and `pageNumber` will control the result set.
 
-* **pageNumber**
+* **pageNumber**\
   Default: `1`
   Specifies which “page” of results to return.
 
-* **pageSize**
+* **pageSize**\
   Default: `1000` (maximum `1000`)
   Number of records per page.
 
-* **limit**
+* **limit**\
   Default: `100` (maximum `100`)
   If specified without `pageNumber`/`pageSize`/`offset`, controls the total records returned.
 
-* **offset**
+* **offset**\
   An entity ID indicating where to start the next page of results.
   Requires sorting by the ID field.
 
@@ -168,7 +158,7 @@ The API supports pagination using four parameters: `pageSize`, `pageNumber`, `li
 
 PCE uses standard HTTP response codes and structured API error codes to indicate the outcome of each request.
 
----
+***
 
 ### HTTP Status Codes
 
@@ -188,7 +178,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | 429  | Too Many Requests – Rate limit exceeded; “Retry-After” header may indicate when to retry          |
 | 5xx  | Server Error – Unexpected problem on PCE’s servers                                                |
 
----
+***
 
 ### API Error Code Categories
 
@@ -198,7 +188,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | EC-VA-XXXX   | Validation errors (e.g. missing or invalid parameters) |
 | EC-BL-XXXX   | Business logic errors (entity-specific rules)          |
 
----
+***
 
 ### Authorization Error Codes
 
@@ -206,7 +196,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | ---------------- | --------------------------------------------------------------------- |
 | **EC-AUTH-0001** | User authorization attempt failed. User needs to confirm credentials. |
 
----
+***
 
 ### Header Validation Error Codes
 
@@ -215,7 +205,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | **EC-VA-0001** | Missing header parameter: `[object]`. |
 | **EC-VA-0002** | Invalid header parameter: `[object]`. |
 
----
+***
 
 ### User Verification & Security Validation Errors
 
@@ -224,7 +214,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 | **EC-VA-0106** | Three security questions are required.                      |
 | **EC-VA-0107** | At least one of new password or security question required. |
 
----
+***
 
 ### API Validation Error Codes
 
@@ -238,7 +228,7 @@ PCE uses standard HTTP response codes and structured API error codes to indicate
 
 > **Note:** Business-Logic errors (`EC-BL-XXXX`) are entity-specific and documented under each entity’s “Business Validations” section.
 
----
+***
 
 ### Warning Messages
 

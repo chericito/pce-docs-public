@@ -41,20 +41,7 @@ next:
   </Card>
 </Cards>
 
-<br />
-
-# Feature Table
-
-| Feature                 | Description                                                            |
-| ----------------------- | ---------------------------------------------------------------------- |
-| Sale Referenced Refunds | Secure refunds tied to an original transaction to prevent fraud        |
-| Adhoc Refunds           | Standalone credits (payouts) for promotions, goodwill, or corrections  |
-| Full Refunds            | Return the entire captured amount                                      |
-| Partial Refunds         | Return part of a captured payment; multiple partials up to full amount |
-
-# Key Details
-
-## Sale Referenced Refunds
+# Sale Referenced Refunds
 
 Sale referenced refunds link a reversal directly to its original sale transaction. This ensures you don’t refund more than the captured amount and provides automated reconciliation checks.
 
@@ -77,7 +64,7 @@ Sale referenced refunds link a reversal directly to its original sale transactio
 * Refunds can be initiated when parent is in **PROCESSING**, **APPROVED**, or **COMPLETED**, but will only execute once **COMPLETED**.
 * Sum of all refunds for a transaction ≤ original capture amount.
 
-## Adhoc Refunds
+# Adhoc Refunds
 
 Adhoc refunds (non-referenced) create standalone credit transactions not tied to any prior sale. They require additional risk controls and are disabled by default.
 
@@ -93,7 +80,7 @@ Adhoc refunds (non-referenced) create standalone credit transactions not tied to
 * Requires KYC verification and explicit feature enablement
 * Bypasses closed-loop protections of referenced refunds
 
-## Full Refunds
+# Full Refunds
 
 Refund the entire captured amount in one request.
 
@@ -103,7 +90,7 @@ Refund the entire captured amount in one request.
 
 **API Reference:** [Refund Transaction](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-refund-transaction)
 
-## Partial Refunds
+# Partial Refunds
 
 Issue refunds for a portion of the captured amount; you may perform multiple partial refunds until the full amount is returned.
 
@@ -121,9 +108,7 @@ Issue refunds for a portion of the captured amount; you may perform multiple par
 
 ***
 
-For card refund details and parameter definitions, see the [Card Transactions section](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-create-transaction#a-card-transactions) of the Create Transaction API guide.
-
-### Validations
+## Validations
 
 * Make sure the **parent** field uses the original transaction’s **id** or **externalId**—that’s how we know which payment to refund.
 * You can request a refund when the original transaction is **PROCESSING**, **APPROVED**, or **COMPLETED**, but we’ll only process it once the transaction reaches **COMPLETED**.

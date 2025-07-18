@@ -44,29 +44,18 @@ The Separate Authorization & Capture workflow lets you verify payment details an
   </Card>
 </Cards>
 
-# Feature Table
-
-| Feature                      | Description                                                       |
-| ---------------------------- | ----------------------------------------------------------------- |
-| Two-Step Processing          | Separate `authorize` and `capture` API calls                      |
-| Automatic Capture            | Default: capture immediately after authorization                  |
-| Manual Capture               | Trigger capture via explicit API request when you’re ready        |
-| Card-Scheme Validity Windows | AMEX: 7 days; Mastercard: 7 days; Visa: 10 days; Discover: 7 days |
-
-# Key Details
-
-## Authorization
+# Authorization
 
 * Verify shopper payment details with the issuer and reserve funds for the transaction.
 * Authorization holds funds but does not transfer them to your account until capture.
 
-## Capture
+# Capture
 
 * Transfer reserved funds from the shopper to your account by issuing a `capture` API call.
 * Default mode is **Automatic Capture**, which behaves like a Direct Sale (Immediate Capture).
 * **Manual Capture** requires you to explicitly invoke the capture endpoint after order fulfillment.
 
-## Card-Scheme Validity
+# Card-Scheme Validity
 
 Each card network enforces a hold window for authorizations:
 

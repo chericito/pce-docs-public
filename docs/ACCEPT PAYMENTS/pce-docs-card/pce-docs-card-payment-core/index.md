@@ -1,5 +1,5 @@
 ---
-title: 'Card: Payment Core'
+title: Payment Core
 excerpt: >-
   Explore PCE’s core payment processing features—from Direct Sale through secure
   card storage—to manage every step of the payment lifecycle.

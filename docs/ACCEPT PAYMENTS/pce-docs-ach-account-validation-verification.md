@@ -31,11 +31,11 @@ Before initiating any ACH debit, it’s critical to confirm that the customer’
 
 # Feature Table
 
-| Feature                      | Description                                                                        |
-| ---------------------------- | ---------------------------------------------------------------------------------- |
-| Instant EWS Verification     | Real-time account status, ownership, and negative-history check via EWS            |
-| Prenotification (Prenote)    | Zero-dollar test ACH entry to validate routing and account numbers over 2 days     |
-| Micro-deposit Verification   | Two small random credits (<$1) sent to the account; customer confirms amounts      |
+| Feature                    | Description                                                                    |
+| -------------------------- | ------------------------------------------------------------------------------ |
+| Instant EWS Verification   | Real-time account status, ownership, and negative-history check via EWS        |
+| Prenotification (Prenote)  | Zero-dollar test ACH entry to validate routing and account numbers over 2 days |
+| Micro-deposit Verification | Two small random credits (\<$1) sent to the account; customer confirms amounts |
 
 # Key details
 

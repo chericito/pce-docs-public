@@ -31,10 +31,10 @@ The Separate Authorization & Capture workflow lets you verify payment details an
 
 # Compliance / Regulation Mandates
 
-- **PCI DSS Level 1**: Ensure all authorization and capture operations comply with PCI DSS Level 1 standards to protect cardholder data.  
-- **PSD2 Strong Customer Authentication**: EU authorizations require two-factor authentication under PSD2 for customer-initiated payments.  
-- **AML & KYC**: Apply risk-based anti-money laundering controls and customer due diligence before placing or capturing holds on funds.  
-- **GDPR Data Protection**: Adhere to GDPR principles—data minimization, explicit consent, and secure handling—when processing EU citizens’ payment information.  
+* **PCI DSS Level 1**: Ensure all authorization and capture operations comply with PCI DSS Level 1 standards to protect cardholder data.  
+* **PSD2 Strong Customer Authentication**: EU authorizations require two-factor authentication under PSD2 for customer-initiated payments.  
+* **AML & KYC**: Apply risk-based anti-money laundering controls and customer due diligence before placing or capturing holds on funds.  
+* **GDPR Data Protection**: Adhere to GDPR principles—data minimization, explicit consent, and secure handling—when processing EU citizens’ payment information.  
 
 # Feature Table
 
@@ -77,6 +77,6 @@ Each card network enforces a hold window for authorizations:
 4. Upon shipping or service delivery, merchant sends `capture` request referencing the original auth.
 5. PCE processes the capture and returns a confirmation of the fund transfer.
 
----
+***
 
 > **Use case:** Cancel or modify orders before capture by issuing a `void` on the authorization if complications arise prior to fund transfer.

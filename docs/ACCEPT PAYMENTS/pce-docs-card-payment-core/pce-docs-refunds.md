@@ -31,10 +31,10 @@ PCE supports two refund workflows: **Sale Referenced Refunds**, which link direc
 
 # Compliance / Regulation Mandates
 
-- **PCI DSS Level 1**: All refund operations must adhere to PCI DSS Level 1 standards to ensure secure handling of cardholder data.  
-- **PSD2 Strong Customer Authentication**: EU refunds linked to consumer-initiated transactions require two-factor authentication under PSD2.  
-- **AML & KYC**: Perform risk-based anti-money laundering checks and customer due diligence before processing high-value or non-referenced refunds.  
-- **GDPR Data Protection**: Ensure personal and payment data used in refund workflows complies with GDPR principles, including data minimization and explicit consent.  
+* **PCI DSS Level 1**: All refund operations must adhere to PCI DSS Level 1 standards to ensure secure handling of cardholder data.  
+* **PSD2 Strong Customer Authentication**: EU refunds linked to consumer-initiated transactions require two-factor authentication under PSD2.  
+* **AML & KYC**: Perform risk-based anti-money laundering checks and customer due diligence before processing high-value or non-referenced refunds.  
+* **GDPR Data Protection**: Ensure personal and payment data used in refund workflows complies with GDPR principles, including data minimization and explicit consent.  
 
 # Feature Table
 
@@ -112,7 +112,7 @@ Issue refunds for a portion of the captured amount; you may perform multiple par
 
 **API Reference:** [Refund Transaction](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-refund-transaction)
 
----
+***
 
 For card refund details and parameter definitions, see the [Card Transactions section](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-create-transaction#a-card-transactions) of the Create Transaction API guide.
 

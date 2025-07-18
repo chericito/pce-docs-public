@@ -12,39 +12,39 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
 Card Detail Storage lets you securely save customer payment information in a PCI-compliant vault, enabling faster checkouts, subscription billing, and automatic top-ups—without handling raw card data.
 
-**In this guide you’ll learn**
-
-* How tokenization replaces sensitive card data with secure tokens
-* Best practices for managing token lifecycle and shopper consent
-* Use cases: subscriptions, top-ups, and one-click checkouts
-
-### Prerequisites & Limitations
+### Prerequisites
 
 * Active merchant account with card-vaulting enabled
 * PCI DSS Level 1 compliance
 * Shopper consent for storing payment details
+
+### Limitations
+
 * Token operations subject to network and regional data rules
 
-# Compliance / Regulation Mandates
+### Compliance / Regulation Mandates
 
-* **PCI DSS Level 1**: Ensure all tokenization and storage processes obey PCI DSS Level 1 requirements to protect cardholder data.  
-* **PSD2 Strong Customer Authentication**: Apply two-factor authentication for saving and using payment details in EU e-commerce scenarios.  
-* **AML & KYC**: Follow risk-based Anti-Money Laundering and Know Your Customer guidelines when onboarding tokenized payment methods.  
-* **GDPR Data Protection**: Comply with GDPR mandates on data minimization, explicit consent, and secure storage for EU citizens’ payment information.  
+<Cards columns={4}>
+  <Card title="PCI DSS Level 1" icon="fa-shield-alt">
+    All card data handling—authorization, capture, routing, and tokenization—must comply with PCI DSS Level 1 standards to secure cardholder information.
+  </Card>
 
-# Feature Table
+  <Card title="PSD2 Strong Customer Authentication" icon="fa-mobile-alt">
+    Two-factor authentication under PSD2 is required for EU card payments initiated by customers.
+  </Card>
 
-| Feature                       | Description                                                     |
-| ----------------------------- | --------------------------------------------------------------- |
-| Secure PCI-Compliant Vaulting | Store card data in a fully compliant, tokenized vault           |
-| Token Lifecycle Management    | Create, retrieve, update, and delete tokens securely            |
-| Subscription & Top-ups        | Charge stored tokens for recurring billing or automatic reloads |
+  <Card title="AML & KYC" icon="fa-user-check">
+    Implement risk-based anti-money laundering controls and customer due diligence for card transactions, especially high-value or cross-border.
+  </Card>
 
-# Key Details
+  <Card title="GDPR Data Protection" icon="fa-user-shield">
+    Ensure personal and payment data processed in card workflows adheres to GDPR principles, including minimization, consent, and secure handling.
+  </Card>
+</Cards>
+
+# Card Details Storage
 
 Securely store customer payment details to streamline future purchases. We provide a fully PCI DSS Level 1–compliant vault using tokenization to protect card data, reduce your PCI scope, and simplify compliance. With shopper consent, you can store one or more payment methods per customer.
 

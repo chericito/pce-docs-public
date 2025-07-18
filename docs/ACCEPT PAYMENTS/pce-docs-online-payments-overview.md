@@ -231,20 +231,16 @@ PCE supports a variety of payment methods to suit your business needs. Choose fr
 </table>
 `}</HTMLBlock>
 
-<Cards columns={4}>
-  <Card title="First Card" href="https://readme.com" icon="fa-home" target="_blank">
-    Neque porro quisquam est qui dolorem ipsum quia
+<Cards columns={3}>
+  <Card title="Card" href="pce-docs-card" icon="fa-credit-card">
+    Accept and manage credit and debit card payments with PCE’s robust, compliant platform.
   </Card>
 
-  <Card title="Second Card" icon="fa-user">
-    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
+  <Card title="ACH Bank Debit" href="pce-docs-ach" icon="fa-university">
+    Initiate and manage ACH bank debit payments with secure, compliant API workflows.
   </Card>
 
-  <Card title="Third Card" icon="fa-star">
-    > Ut enim ad minim veniam, quis nostrud ullamco
-  </Card>
-
-  <Card title="Fourth Card" icon="fa-question">
-    **Excepteur sint occaecat cupidatat non proident**
+  <Card title="Check Deposits" href="pce-docs-checks-deposits" icon="fa-money-check-alt">
+    Deposit checks remotely or via lockbox with PCE’s streamlined check processing features.
   </Card>
 </Cards>

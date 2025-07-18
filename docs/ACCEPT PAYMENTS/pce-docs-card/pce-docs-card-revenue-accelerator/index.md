@@ -1,5 +1,5 @@
 ---
-title: 'Card: Revenue Accelerator'
+title: Revenue Accelerator
 excerpt: >-
   Maximize your net payment revenue with tools designed to lower fees and recoup
   processing costs seamlessly.

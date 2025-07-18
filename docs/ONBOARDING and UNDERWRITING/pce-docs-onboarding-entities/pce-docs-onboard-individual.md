@@ -22,44 +22,40 @@ An Individual Customer represents a sole consumer onboarded to the Passport plat
 
 The individual onboarding process consists of six key steps that guide the user from initiation through verification to service activation:
 
-* Start Session: Initiate the onboarding by calling the POST /onboarding/session endpoint. Ensure the customer type is set to “individual”.
-* Collect Info: Gather required personal details such as full name, date of birth, contact information, and residential address.
-* Identity Check: Perform a real-time identity verification using a supported KYC provider. This typically includes validation through SSN, national ID, or equivalent identifiers.
-* Document Upload (if needed): If real-time KYC fails or returns inconclusive results, prompt the user to upload identity and address documents via the /documents/upload endpoint.
-* Underwriting: The system performs automated risk checks, and in some cases, manual underwriting. A decision is then issued with the customer’s onboarding status.
-* Provision Services: Once onboarding is approved, the platform automatically provisions related services such as account creation, card issuance, or wallet activation.
+- **Start Session:** Initiate the onboarding by calling the `POST /onboarding/session` endpoint. Ensure the customer type is set to “individual”.
+- **Collect Info:** Gather required personal details such as full name, date of birth, contact information, and residential address.
+- **Identity Check:** Perform a real-time identity verification using a supported KYC provider. This typically includes validation through SSN, national ID, or equivalent identifiers.
+- **Document Upload (if needed):** If real-time KYC fails or returns inconclusive results, prompt the user to upload identity and address documents via the `POST /documents/upload` endpoint.
+- **Underwriting:** The system performs automated risk checks, and in some cases, manual underwriting. A decision is then issued with the customer’s onboarding status.
+- **Provision Services:** Once onboarding is approved, the platform automatically provisions related services such as account creation, card issuance, or wallet activation.
 
 # Compliance Checks
 
-<div style={{ borderLeft: "4px solid #4caf50", paddingLeft: "12px", background: "#f9f9f9", marginBottom: "1rem" }}>
-  All onboarding flows are subject to compliance verifications as per regulatory requirements.
-</div>
+> **Note:** All onboarding flows are subject to compliance verifications as per regulatory requirements.
 
-- Sanctions screening (OFAC, PEP, Watchlists) <br>
-- Real-time or fallback manual KYC <br>
-- Risk scoring based on service type and geography
+- Sanctions screening (OFAC, PEP, Watchlists)  
+- Real-time or fallback manual KYC  
+- Risk scoring based on service type and geography  
 
 # Integration Summary
 
-| Integration Component | Endpoint / Feature                                    |
-| --------------------- | ----------------------------------------------------- |
-| Start onboarding      | `POST /onboarding/session`                            |
-| Submit user info      | `POST /customers`                                     |
-| Upload documents      | `POST /documents/upload`                              |
-| Status updates        | `GET /customers/`{id}` or Webhook                      |
-| Track progress        | `onboarding.status.updated`, `document.review.failed` |
+| Integration Component | Endpoint / Feature                                      |
+| --------------------- | ------------------------------------------------------- |
+| Start onboarding      | `POST /onboarding/session`                              |
+| Submit user info      | `POST /customers`                                       |
+| Upload documents      | `POST /documents/upload`                                |
+| Status updates        | ``GET /customers/{id}`` or Webhook                      |
+| Track progress        | `onboarding.status.updated`, `document.review.failed`   |
 
 # Testing & Go Live
 
-* Use sandbox data to simulate both approval and rejection flows.
-
-* Trigger edge cases using invalid documents or incomplete profiles.
-
-* Contact your Partner Success team to enable production onboarding.
+- Use sandbox data to simulate both approval and rejection flows.  
+- Trigger edge cases using invalid documents or incomplete profiles.  
+- Contact your Partner Success team to enable production onboarding.  
 
 # Limitations
 
-* Supported document types may vary by country or region
-* Certain profiles (e.g., minors, non-residents) may require additional review
+- Supported document types may vary by country or region  
+- Certain profiles (e.g., minors, non-residents) may require additional review  
 
 # See Also

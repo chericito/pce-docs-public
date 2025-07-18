@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<p style="color:rgb(4, 4, 4);font-size: 15px; padding-bottom: 5px;padding-top: 15px;line-height: 23px;">PCE offers a flexible and secure onboarding framework for both individual and business customers, integrating directly into your product workflows.
+PCE offers a flexible and secure onboarding framework for both individual and business customers, integrating directly into your product workflows.
 
 The onboarding flow is designed to minimize friction and enable incremental data collection through a **wizard-like experience**. It is intelligent and adaptive — dynamically rendering forms based on user input such as:
 
@@ -26,29 +26,14 @@ Choose the method that fits your customer experience model best.
 
 # Who Can You Onboard?
 
-<div class="3b" style="display: flex;align-content: space-between;flex-direction: row;width: 865px; position: relative;gap: 15px;margin-bottom: 15px;">
+[![Business Icon](https://files.readme.io/f810a73c0a8b5771ee4a1ccf7b8e1fb33b58430e0535adc1a3b28ab793bad23b-images_5.png)](doc:pce-docs-onboard-business)  
+### [Business](doc:pce-docs-onboard-business)  
+A registered entity with legal documents, tax ID, beneficial owners, and authorized signers
 
-<a href="doc:pce-docs-onboard-business" style="text-decoration:none">
-<div class="b1" style=" box-sizing: border-box; border: solid 1px rgba(0, 0, 0, 0.1);background-color: #fff;border-radius: 7px;text-align: center;text-decoration: none!important;box-shadow: 0 4px 10px rgba(62, 62, 62, 0.03);transition: all .2s ease 10ms!important;padding: 25px 25px 20px 25px;color: #000!important;width: 265px; height: 295px; transition: all .2s ease 10ms">
-<img src="https://files.readme.io/f810a73c0a8b5771ee4a1ccf7b8e1fb33b58430e0535adc1a3b28ab793bad23b-images_5.png" style="width: 50px;">
-<h2 style="font-size: 18px;line-height: 27px;">Business </h2>
-<p style="font-size: 15px;line-height: 20px;margin: 8px 0 10px 0;color: rgba(0,0,0,.5);">A registered entity with legal documents, tax ID, beneficial owners, and authorized signers</p>
-</div>
-</a>
+[![Joint Tenancy Icon](https://files.readme.io/b7a607987ad2d4bbc7da8f9898e801cb0c3b968643476e18fc5d1179f24c3005-family-house-icon-vector-isolated-260nw-722004034_copy.png)](doc:pce-docs-onboard-joint-tenancy)  
+### [Joint Tenancy](doc:pce-docs-onboard-joint-tenancy)  
+A shared account type where two or more individuals hold equal rights to the entire account
 
-<a href="doc:pce-docs-onboard-joint-tenancy" style="text-decoration:none">
-<div class="b2" style=" box-sizing: border-box;border: solid 1px rgba(0,0,0,.1);background-color: #fff;
-border-radius: 7px;text-align: center;text-decoration: none!important;box-shadow: 0 4px 10px rgba(62,62,62,.03);transition: all .2s ease 10ms!important;padding: 25px 25px 20px 25px;color: #000!important;width: 265px;height: 295px; transition: all .2s ease 10ms">
-<img src="https://files.readme.io/b7a607987ad2d4bbc7da8f9898e801cb0c3b968643476e18fc5d1179f24c3005-family-house-icon-vector-isolated-260nw-722004034_copy.png" style="width: 50px;">
-<h2 style="font-size: 18px;line-height: 27px;">Joint Tenancy</h2>
-<p style=" font-size: 15px;line-height: 20px;margin: 8px 0 10px 0;color: rgba(0,0,0,.5);"> A shared account type where two or more individuals hold equal rights to the entire account </p>
-</div>
-</a>
-
-<a href="doc:pce-docs-onboard-individual" style="text-decoration:none" >
-<div class="b3" style="box-sizing: border-box;border: solid 1px rgba(0,0,0,.1);background-color: #fff;border-radius: 7px;text-align: center;text-decoration: none!important;box-shadow: 0 4px 10px rgba(62,62,62,.03);transition: all .2s ease 10ms!important;padding: 25px 25px 20px 25px;color: #000!important;width: 265px;height: 295px; transition: all .2s ease 10ms">
-<img src="https://files.readme.io/d8d2b875814f09f0e77e2ecb9946e1e34424d0baafbadb7329ecbba132f4f5cd-personal-id-icon-logo-vector-design_810420-797.avif" style="width: 50px;">
-<h2 style="font-size: 18px;line-height: 27px;">Individual</h2>
-<p style="font-size: 15px;line-height: 20px;margin: 8px 0 10px 0;color: rgba(0,0,0,.5);"> A sole user or consumer onboarded with personal identity verification</p>
-</div>
-</a>
+[![Individual Icon](https://files.readme.io/d8d2b875814f09f0e77e2ecb9946e1e34424d0baafbadb7329ecbba132f4f5cd-personal-id-icon-logo-vector-design_810420-797.avif)](doc:pce-docs-onboard-individual)  
+### [Individual](doc:pce-docs-onboard-individual)  
+A sole user or consumer onboarded with personal identity verification

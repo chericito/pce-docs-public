@@ -18,34 +18,215 @@ Offering support for multiple payment methods—credit and debit cards, ACH Debi
 
 # Use case
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Feature",
-    "h-1": "Description",
-    "0-0": "One-Time Payments",
-    "0-1": "Process single-use transactions without storing payment details.  \n  \n**Use cases: **Retail checkout, Event registrations, Invoice or service-fee payments",
-    "1-0": "Saved Payment Details",
-    "1-1": "Store customer payment methods securely for repeat purchases.   \n  \n**Use cases: **Returning e-commerce customers, Subscription sign-ups, Vendor payments",
-    "2-0": "Recurring Payments",
-    "2-1": "Automate charges on a schedule—ideal for subscriptions & installment plans.   \n  \n**Use cases:** SaaS subscriptions, Membership dues, Installment billing."
-  },
-  "cols": 2,
-  "rows": 3,
-  "align": [
-    null,
-    null
-  ]
-}
-[/block]
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Feature
+      </th>
 
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        One-Time Payments
+      </td>
+
+      <td>
+        Process single-use transactions without storing payment details.  
+
+        * \*Use cases: \*\*Retail checkout, Event registrations, Invoice or service-fee payments
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Saved Payment Details
+      </td>
+
+      <td>
+        Store customer payment methods securely for repeat purchases.   
+
+        * \*Use cases: \*\*Returning e-commerce customers, Subscription sign-ups, Vendor payments
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Recurring Payments
+      </td>
+
+      <td>
+        Automate charges on a schedule—ideal for subscriptions & installment plans.   
+
+        * \*Use cases:\*\* SaaS subscriptions, Membership dues, Installment billing.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Payment Methods
 
 PCE supports a variety of payment methods to suit your business needs. Choose from any of the options below:
 
-[block:html]
-{
-  "html": "<table>\n  <thead>\n    <tr>\n      <th align=\"left\">Product</th>\n      <th align=\"left\">Capabilities</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>Card</strong></td>\n      <td>\n        <ul>\n          <li><strong>Payments Core</strong>\n            <ul>\n              <li>✓ Direct Sale (Immediate Capture)</li>\n              <li>✓ Separate auth and captures</li>\n              <li>✓ Authorization Controls\n                <ul>\n                  <li>✓ Incremental Auth</li>\n                  <li>✓ Void authorization</li>\n                </ul>\n              </li>\n              <li>✓ Capture Controls\n                <ul>\n                  <li>✓ Full captures</li>\n                  <li>✓ Partial captures (single/multi)</li>\n                  <li>✓ Over capture</li>\n                </ul>\n              </li>\n              <li>✓ Refunds\n                <ul>\n                  <li>✓ Full Refunds</li>\n                  <li>✓ Partial (single/multiple)</li>\n                </ul>\n              </li>\n              <li>✓ Tip Adjustments</li>\n              <li>✓ Store Card Detail (Tokenization)</li>\n              <li>✓ Supported Card Brand Support\n                <ul>\n                  <li>✓ Visa, Mastercard, AMEX OptBlue, Discover</li>\n                  <li>✗ AMEX Direct, Discover Direct</li>\n                </ul>\n              </li>\n              <li>✓ Recurring Payments</li>\n            </ul>\n          </li>\n          <li><strong>Risk / Fraud Shield</strong>\n            <ul>\n              <li>✓ PCI Compliance Support</li>\n              <li>✓ Good funds model</li>\n              <li>✓ Reduce Decline Rates\n                <ul>\n                  <li>✓ AVS, CVV checks</li>\n                  <li>✓ Name Match Check</li>\n                  <li>✓ Decline Reasons</li>\n                </ul>\n              </li>\n              <li>✓ Dynamic Statement Descriptors</li>\n              <li>✓ Velocity checks</li>\n            </ul>\n          </li>\n          <li><strong>Revenue Accelerator</strong>\n            <ul>\n              <li>✓ Interchange Optimization via Payment L2/L3 Line Items</li>\n              <li>✓ Cost Recovery via Surcharge</li>\n            </ul>\n          </li>\n          <li><strong>Power your Platforms (Marketplace)</strong>\n            <ul>\n              <li>✓ Split Payments</li>\n            </ul>\n          </li>\n        </ul>\n      </td>\n    </tr>\n    <tr>\n      <td><strong>ACH Bank Debit</strong></td>\n      <td>\n        <ul>\n          <li><strong>Payments Core</strong>\n            <ul>\n              <li>✓ ACH Debit Initiation</li>\n              <li>✓ Same day ACH Payment</li>\n              <li>✓ Track Payments</li>\n              <li>✓ SEC Codes – CCD, PPD, WEB, TEL</li>\n              <li>✓ Modify Payments – Cancel, Update</li>\n              <li>✓ Refunds\n                <ul>\n                  <li>✓ Full Refunds</li>\n                  <li>✓ Partial / Multiple Partial</li>\n                </ul>\n              </li>\n              <li>✓ Addenda Records – Single line</li>\n              <li>✓ Recurring Payments</li>\n            </ul>\n          </li>\n          <li><strong>Account Validation & Verification</strong>\n            <ul>\n              <li>✓ Instant Verification via EWS</li>\n              <li>✓ Prenotification (Prenote)</li>\n              <li>✓ Micro-deposit Verification</li>\n            </ul>\n          </li>\n          <li><strong>Processing / Settlement</strong>\n            <ul>\n              <li>✓ Standard ACH Processing</li>\n              <li>✓ Same Day ACH Processing</li>\n              <li>✓ ACH Reversals</li>\n              <li>✓ Automated Return handling</li>\n              <li>✓ Notification of Change handling</li>\n            </ul>\n          </li>\n          <li><strong>Risk / Fraud Shield</strong>\n            <ul>\n              <li>✓ Good funds model</li>\n              <li>✓ Velocity Controls</li>\n              <li>✓ Statement Descriptors</li>\n              <li>✓ Fraud prevention\n                <ul>\n                  <li>✓ Debit Blocks on high return rates</li>\n                </ul>\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </td>\n    </tr>\n    <tr>\n      <td><strong>Check Deposit</strong></td>\n      <td>\n        <ul>\n          <li><strong>Payments Core</strong>\n            <ul>\n              <li>✓ Mobile Check Deposit</li>\n              <li>✓ Lockbox Check Deposit</li>\n            </ul>\n          </li>\n          <li><strong>Processing / Settlement</strong>\n            <ul>\n              <li>✓ Check Rejections and Returns handling</li>\n            </ul>\n          </li>\n          <li><strong>Risk / Fraud Shield</strong>\n            <ul>\n              <li>✓ Good funds model</li>\n              <li>✓ Velocity Controls</li>\n              <li>✓ Manual review</li>\n            </ul>\n          </li>\n        </ul>\n      </td>\n    </tr>\n  </tbody>\n</table>"
-}
-[/block]
+<HTMLBlock>{`
+<table>
+  <thead>
+    <tr>
+      <th align="left">Product</th>
+      <th align="left">Capabilities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Card</strong></td>
+      <td>
+        <ul>
+          <li><strong>Payments Core</strong>
+            <ul>
+              <li>✓ Direct Sale (Immediate Capture)</li>
+              <li>✓ Separate auth and captures</li>
+              <li>✓ Authorization Controls
+                <ul>
+                  <li>✓ Incremental Auth</li>
+                  <li>✓ Void authorization</li>
+                </ul>
+              </li>
+              <li>✓ Capture Controls
+                <ul>
+                  <li>✓ Full captures</li>
+                  <li>✓ Partial captures (single/multi)</li>
+                  <li>✓ Over capture</li>
+                </ul>
+              </li>
+              <li>✓ Refunds
+                <ul>
+                  <li>✓ Full Refunds</li>
+                  <li>✓ Partial (single/multiple)</li>
+                </ul>
+              </li>
+              <li>✓ Tip Adjustments</li>
+              <li>✓ Store Card Detail (Tokenization)</li>
+              <li>✓ Supported Card Brand Support
+                <ul>
+                  <li>✓ Visa, Mastercard, AMEX OptBlue, Discover</li>
+                  <li>✗ AMEX Direct, Discover Direct</li>
+                </ul>
+              </li>
+              <li>✓ Recurring Payments</li>
+            </ul>
+          </li>
+          <li><strong>Risk / Fraud Shield</strong>
+            <ul>
+              <li>✓ PCI Compliance Support</li>
+              <li>✓ Good funds model</li>
+              <li>✓ Reduce Decline Rates
+                <ul>
+                  <li>✓ AVS, CVV checks</li>
+                  <li>✓ Name Match Check</li>
+                  <li>✓ Decline Reasons</li>
+                </ul>
+              </li>
+              <li>✓ Dynamic Statement Descriptors</li>
+              <li>✓ Velocity checks</li>
+            </ul>
+          </li>
+          <li><strong>Revenue Accelerator</strong>
+            <ul>
+              <li>✓ Interchange Optimization via Payment L2/L3 Line Items</li>
+              <li>✓ Cost Recovery via Surcharge</li>
+            </ul>
+          </li>
+          <li><strong>Power your Platforms (Marketplace)</strong>
+            <ul>
+              <li>✓ Split Payments</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>ACH Bank Debit</strong></td>
+      <td>
+        <ul>
+          <li><strong>Payments Core</strong>
+            <ul>
+              <li>✓ ACH Debit Initiation</li>
+              <li>✓ Same day ACH Payment</li>
+              <li>✓ Track Payments</li>
+              <li>✓ SEC Codes – CCD, PPD, WEB, TEL</li>
+              <li>✓ Modify Payments – Cancel, Update</li>
+              <li>✓ Refunds
+                <ul>
+                  <li>✓ Full Refunds</li>
+                  <li>✓ Partial / Multiple Partial</li>
+                </ul>
+              </li>
+              <li>✓ Addenda Records – Single line</li>
+              <li>✓ Recurring Payments</li>
+            </ul>
+          </li>
+          <li><strong>Account Validation & Verification</strong>
+            <ul>
+              <li>✓ Instant Verification via EWS</li>
+              <li>✓ Prenotification (Prenote)</li>
+              <li>✓ Micro-deposit Verification</li>
+            </ul>
+          </li>
+          <li><strong>Processing / Settlement</strong>
+            <ul>
+              <li>✓ Standard ACH Processing</li>
+              <li>✓ Same Day ACH Processing</li>
+              <li>✓ ACH Reversals</li>
+              <li>✓ Automated Return handling</li>
+              <li>✓ Notification of Change handling</li>
+            </ul>
+          </li>
+          <li><strong>Risk / Fraud Shield</strong>
+            <ul>
+              <li>✓ Good funds model</li>
+              <li>✓ Velocity Controls</li>
+              <li>✓ Statement Descriptors</li>
+              <li>✓ Fraud prevention
+                <ul>
+                  <li>✓ Debit Blocks on high return rates</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Check Deposit</strong></td>
+      <td>
+        <ul>
+          <li><strong>Payments Core</strong>
+            <ul>
+              <li>✓ Mobile Check Deposit</li>
+              <li>✓ Lockbox Check Deposit</li>
+            </ul>
+          </li>
+          <li><strong>Processing / Settlement</strong>
+            <ul>
+              <li>✓ Check Rejections and Returns handling</li>
+            </ul>
+          </li>
+          <li><strong>Risk / Fraud Shield</strong>
+            <ul>
+              <li>✓ Good funds model</li>
+              <li>✓ Velocity Controls</li>
+              <li>✓ Manual review</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`}</HTMLBlock>

@@ -1,5 +1,5 @@
 ---
-title: 'ACH: Payment Core'
+title: Payment Core
 excerpt: >-
   Manage ACH debit initiation, validation, returns, and refunds with PCE’s
   robust ACH Payment Core features.

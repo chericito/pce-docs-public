@@ -30,10 +30,10 @@ Value-added transactions let you append extra charges—like gratuities or servi
 
 # Compliance / Regulation Mandates
 
-- **PCI DSS Level 1**: All value-added transactions—including tips added via adjustments or over-capture—must comply with PCI DSS Level 1 to ensure secure handling of payment data.  
-- **PSD2 Strong Customer Authentication**: In the EU, tipping and service-fee flows require two-factor authentication under PSD2 for customer-initiated charges.  
-- **AML & KYC**: Perform risk-based anti-money laundering controls and customer due diligence before enabling gratuities or service charges.  
-- **GDPR Data Protection**: Any personal data used in tipping functionality must adhere to GDPR principles—data minimization, explicit consent, and secure storage.  
+* **PCI DSS Level 1**: All value-added transactions—including tips added via adjustments or over-capture—must comply with PCI DSS Level 1 to ensure secure handling of payment data.  
+* **PSD2 Strong Customer Authentication**: In the EU, tipping and service-fee flows require two-factor authentication under PSD2 for customer-initiated charges.  
+* **AML & KYC**: Perform risk-based anti-money laundering controls and customer due diligence before enabling gratuities or service charges.  
+* **GDPR Data Protection**: Any personal data used in tipping functionality must adhere to GDPR principles—data minimization, explicit consent, and secure storage.  
 
 # Feature Table
 

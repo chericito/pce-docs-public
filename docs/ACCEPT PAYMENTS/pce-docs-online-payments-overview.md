@@ -14,7 +14,7 @@ next:
 ---
 Priority’s Commerce Engine (PCE) empowers businesses to accept secure, seamless, and flexible payments directly on their websites and mobile applications. Built on a modern, cloud-native platform, PCE brings together operational expertise and a comprehensive suite of tools to support complex commerce and finance needs. Whether you’re processing one-time transactions, saving customer payment methods, or handling subscription billing, PCE delivers a unified, scalable solution.
 
-Offering support for multiple payment methods—credit and debit cards, ACH Debits, and checks — PCE ensures your customers can pay however they prefer. By integrating through Passport PCE APIs, you gain a single platform for all your payment channels, unified transaction data, and powerful reporting, enabling you to launch products faster and optimize your payment flows. 
+Offering support for multiple payment methods—credit and debit cards, ACH Debits, and checks — PCE ensures your customers can pay however they prefer. By integrating through Passport PCE APIs, you gain a single platform for all your payment channels, unified transaction data, and powerful reporting, enabling you to launch products faster and optimize your payment flows.
 
 # Use case
 
@@ -38,9 +38,9 @@ Offering support for multiple payment methods—credit and debit cards, ACH Debi
       </td>
 
       <td>
-        Process single-use transactions without storing payment details.  
+        Process single-use transactions without storing payment details.
 
-        * \*Use cases: \*\*Retail checkout, Event registrations, Invoice or service-fee payments
+        * **Use cases:** Retail checkout, Event registrations, Invoice or service-fee payments
       </td>
     </tr>
 
@@ -50,9 +50,9 @@ Offering support for multiple payment methods—credit and debit cards, ACH Debi
       </td>
 
       <td>
-        Store customer payment methods securely for repeat purchases.   
+        Store customer payment methods securely for repeat purchases.
 
-        * \*Use cases: \*\*Returning e-commerce customers, Subscription sign-ups, Vendor payments
+        * **Use cases:** Returning e-commerce customers, Subscription sign-ups, Vendor payments
       </td>
     </tr>
 
@@ -62,9 +62,9 @@ Offering support for multiple payment methods—credit and debit cards, ACH Debi
       </td>
 
       <td>
-        Automate charges on a schedule—ideal for subscriptions & installment plans.   
+        Automate charges on a schedule—ideal for subscriptions & installment plans.
 
-        * \*Use cases:\*\* SaaS subscriptions, Membership dues, Installment billing.
+        * **Use cases:** SaaS subscriptions, Membership dues, Installment billing.
       </td>
     </tr>
   </tbody>

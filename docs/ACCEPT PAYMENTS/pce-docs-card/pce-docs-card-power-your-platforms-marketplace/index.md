@@ -1,5 +1,5 @@
 ---
-title: 'Card: Power Your Platform''s Marketplace'
+title: Power Your Platform's Marketplace
 excerpt: >-
   Unlock the full potential of your marketplace platform with PCE’s Split
   Payouts—automated rules-based revenue distribution for seamless

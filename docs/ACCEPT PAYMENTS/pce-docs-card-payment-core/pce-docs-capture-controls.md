@@ -31,10 +31,10 @@ Capture Controls let you finalize payment settlements precisely: from capturing 
 
 # Compliance / Regulation Mandates
 
-- **PCI DSS Level 1**: All capture and settlement operations must comply with PCI DSS Level 1 standards to ensure cardholder data security.  
-- **PSD2 Strong Customer Authentication**: European capture operations require two-factor authentication under PSD2 for customer-initiated payments.  
-- **AML & KYC**: Perform anti-money laundering checks and customer due diligence before authorizing or capturing high-risk transactions.  
-- **GDPR Data Protection**: Ensure any personal or payment data used in capture workflows adheres to GDPR principles, including data minimization and explicit consent.  
+* **PCI DSS Level 1**: All capture and settlement operations must comply with PCI DSS Level 1 standards to ensure cardholder data security.  
+* **PSD2 Strong Customer Authentication**: European capture operations require two-factor authentication under PSD2 for customer-initiated payments.  
+* **AML & KYC**: Perform anti-money laundering checks and customer due diligence before authorizing or capturing high-risk transactions.  
+* **GDPR Data Protection**: Ensure any personal or payment data used in capture workflows adheres to GDPR principles, including data minimization and explicit consent.  
 
 # Feature Table
 

@@ -1,5 +1,5 @@
 ---
-title: 'Overview: Online Payments'
+title: 'Overview: Online & In-App Payments'
 excerpt: >-
   Accept and manage online payments effortlessly with PCE’s flexible payment
   types and methods.

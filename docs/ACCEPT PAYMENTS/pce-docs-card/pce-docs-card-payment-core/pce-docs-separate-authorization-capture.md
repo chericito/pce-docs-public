@@ -77,3 +77,10 @@ Each card network enforces a hold window for authorizations:
 # Use case
 
 Cancel or modify orders before capture by issuing a `void` on the authorization if complications arise prior to fund transfer.
+
+> 📘 Data
+>
+> **POST /v1/transaction HTTP/1.1**\
+> **Host**: /\<hostname>
+> **Authorization:** Bearer
+> **Content-Type:** application/json

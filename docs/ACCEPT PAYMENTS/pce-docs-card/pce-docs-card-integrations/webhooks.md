@@ -9,141 +9,137 @@ hidden: false
 metadata:
   robots: index
 ---
-# Overview
-
 Learn how to configure and manage webhook subscriptions in PCE, confirm your endpoint, and process incoming event notifications.
 
-**In this guide you’ll learn**
-
-* How to subscribe and confirm a webhook endpoint
-* Best practices for authenticating and securing webhook messages
-* How to parse and handle common PCE event payloads
-
-### Prerequisites & Limitations
+### Prerequisites
 
 * PCE account with Program Manager portal access
 * Publicly accessible HTTPS endpoint for receiving notifications
 * Ability to validate AWS SNS signatures or your chosen delivery mechanism
+
+### Limitations
+
 * Endpoints must respond within 5 seconds to avoid retries
 
 # Compliance / Regulation Mandates
 
 * **TLS & Data Security:** Endpoints must use HTTPS (TLS 1.2+) and enforce strict cipher suites.
-* **Signature Validation:** Verify each message signature to ensure authenticity (e.g. AWS SNS X-Amz-Sns-Signature).
+* **Signature Validation:** Verify eTach message signature to ensure authenticity (e.g. AWS SNS X-Amz-Sns-Signature).
 * **Idempotency & Retry Handling:** Design handlers to safely ignore duplicate deliveries and handle retry semantics.
-
-<br />
 
 # Event Name
 
 ## customer.individual.create
 
-\{"id": 15140,"eventType": "customer.individual.create",
-"eventTimeStamp": "05/13/2025 01:03:00",
-"eventId": "0001709618091430001",
-"eventCreated": 1747098180090,
-"payload": \[
-\{
-"resourceName": "customer",
-"url": "/v1/customer/id/4009402",
-"id": 4009402,
-"tags": \[
-"grade A customer"
-],
-"externalId": "TSC0567890",
-"metaData": \{
-"acceptedDraftAmount": "$333.50"
-},
-"type": "INDIVIDUAL",
-"individual": \{
-"firstName": "John",
-"middleName": "K",
-"lastName": "Smith",
-"fullName": "John K Smith",
-"last4ssn": "9578",
-"dob": "06/25/2000",
-"homePhone": "573-986-1372",
-"mobilePhone": "235-247-4107",
-"workPhone": "838-900-9290",
-"mailingAddress": \[
-\{
-"resourceName": "address",
-"url": "/v1/customer/id/4009402/mailingAddress/id/1033532",
-"id": 1033532,
-"externalId": "P94567A221",
-"addressLine1": "999",
-"addressLine2": "GT1 KMB",
-"city": "San Jose",
-"state": "CA",
-"zip": "95311",
-"isPrimary": true
-}
-],
-"verification": \{
-"ofacStatus": "PENDING\_VERIFICATION",
-"ofacStatusReason": "PENDING\_VERIFICATION",
-"ofacStatusDate": "12/03/2022 07:49:48",
-"cipStatus": "IGNORED",
-"cipStatusReason": "IGNORED ON\_USER\_REQUEST",
-"cipStatusDate": "12/03/2022 07:49:48"
-},
-"createdOn": "12/03/2022 07:49:48",
-"lastUpdatedOn": "12/03/2022 07:49:48"
-},
-"isPaperless": false,
-"status": "ACTIVE",
-"statusReason": "ON\_USER\_REQUEST",
-"statusDate": "12/03/2022 07:49:48",
-"account": \{
-"resourceName": "account",
-"url": "/v1/customer/id/4009402/account"
-},
-"externalAccount": \{
-"resourceName": "externalAccount",
-"url": "/v1/customer/id/4009402/externalAccount"
-},
-"linkedDocument": \[
-\{
-"id": 24658,
-"purpose": "AUTHORIZATION",
-"status": "PENDING\_VERIFICATION",
-"document": \{
-"resourceName": "document",
-"url": "/v1/document/id/4023765",
-"id": 4023765,
-"type": "SPAA",
-"name": "abc.pdf"
-},
-"linkedOn": "12/03/2022 07:49:48",
-"linkedBy": \{
-"userType": "API\_USER",
-"username": "[FyPtDp@test.com](mailto:FyPtDp@test.com)",
-"status": "ACTIVE"
-}
-}
-],
-"createdOn": "12/03/2022 07:49:48",
-"createdBy": \{
-"userType": "API\_USER",
-"username": "[FyPtDp@test.com](mailto:FyPtDp@test.com)",
-"status": "ACTIVE"
-},
-"lastUpdatedOn": "12/03/2022 07:49:48",
-"lastUpdatedBy": \{
-"userType": "API\_USER",
-"username": "[FyPtDp@test.com](mailto:FyPtDp@test.com)",
-"status": "ACTIVE"
-}
+```
+"\\"{
+   "id":15140,
+   "eventType":"customer.individual.create",
+   &#x20;&#x20;"eventTimeStamp":"05/13/2025 01:03:00",
+   "eventId":"0001709618091430001",
+   "eventCreated":1747098180090,
+   "payload":"\\"[
+      "\\"{
+         "resourceName":"customer",
+         "url":"/v1/customer/id/4009402",
+         "id":4009402,
+         "tags":"\\"[
+            "grade A customer"
+         ],
+         "externalId":"TSC0567890",
+         "metaData":"\\""acceptedDraftAmount":"$333.50"
+      },
+      "type":"INDIVIDUAL",
+      "individual":"\\""firstName":"John",
+      "middleName":"K",
+      "lastName":"Smith",
+      "fullName":"John K Smith",
+      "last4ssn":"9578",
+      "dob":"06/25/2000",
+      "homePhone":"573-986-1372",
+      "mobilePhone":"235-247-4107",
+      "workPhone":"838-900-9290",
+      "mailingAddress":"\\"[
+         "\\\\"{
+            "resourceName":"address",
+            "url":"/v1/customer/id/4009402/mailingAddress/id/1033532",
+            "id":1033532,
+            "externalId":"P94567A221",
+            "addressLine1":"999",
+            "addressLine2":"GT1 KMB",
+            "city":"San Jose",
+            "state":"CA",
+            "zip":"95311",
+            "isPrimary":true
+         }
+      ],
+      "verification":"\\\\"{
+         "ofacStatus":"PENDING\\_VERIFICATION",
+         "ofacStatusReason":"PENDING\\_VERIFICATION",
+         "ofacStatusDate":"12/03/2022 07:49:48",
+         "cipStatus":"IGNORED",
+         "cipStatusReason":"IGNORED ON\\_USER\\_REQUEST",
+         "cipStatusDate":"12/03/2022 07:49:48"
+      },
+      "createdOn":"12/03/2022 07:49:48",
+      "lastUpdatedOn":"12/03/2022 07:49:48"
+   },
+   "isPaperless":false,
+   "status":"ACTIVE",
+   "statusReason":"ON\\_USER\\_REQUEST",
+   "statusDate":"12/03/2022 07:49:48",
+   "account":"\\\\"{
+      "resourceName":"account",
+      "url":"/v1/customer/id/4009402/account"
+   },
+   "externalAccount":"\\\\"{
+      "resourceName":"externalAccount",
+      "url":"/v1/customer/id/4009402/externalAccount"
+   },
+   "linkedDocument":"\\"[
+      "\\\\"{
+         "id":24658,
+         "purpose":"AUTHORIZATION",
+         "status":"PENDING\\_VERIFICATION",
+         "document":"\\\\"{
+            "resourceName":"document",
+            "url":"/v1/document/id/4023765",
+            "id":4023765,
+            "type":"SPAA",
+            "name":"abc.pdf"
+         },
+         "linkedOn":"12/03/2022 07:49:48",
+         "linkedBy":"\\\\"{
+            "userType":"API\\_USER",
+            "username":"\\[FyPtDp\\@test.com]\\(mailto:FyPtDp\\@test.com)",
+            "status":"ACTIVE"
+         }
+      }
+   ],
+   "createdOn":"12/03/2022 07:49:48",
+   "createdBy":"\\\\"{
+      "userType":"API\\_USER",
+      "username":"\\[FyPtDp\\@test.com]\\(mailto:FyPtDp\\@test.com)",
+      "status":"ACTIVE"
+   },
+   "lastUpdatedOn":"12/03/2022 07:49:48",
+   "lastUpdatedBy":"\\\\"{
+      "userType":"API\\_USER",
+      "username":"\\[FyPtDp\\@test.com]\\(mailto:FyPtDp\\@test.com)",
+      "status":"ACTIVE"
+   }
 }
 ]
 }
+```
+
+<br />
 
 ## customer.business.create
 
 &#x20;&#x20;
 
-\{"id": 15140,
-"eventType": "customer.business.create",
+\{"id": 15140,"eventType": "customer.business.create",
 "eventTimeStamp": "05/13/2025 01:03:00",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -155,8 +151,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 15140,
-"eventType": "customer.jointtenancy.create",
+\{"id": 15140,"eventType": "customer.jointtenancy.create",
 "eventTimeStamp": "05/13/2025 01:03:00",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -308,8 +303,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 15140,
-"eventType": "customer.business.update",
+\{"id": 15140,"eventType": "customer.business.update",
 "eventTimeStamp": "05/13/2025 01:03:00",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -443,8 +437,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 3013,
-"eventType": "customer.individual.update",
+\{"id": 3013,"eventType": "customer.individual.update",
 "eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -520,8 +513,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 3019,
-"eventType": "customer.jointtenancy.update",
+\{"id": 3019,"eventType": "customer.jointtenancy.update",
 "eventTimeStamp": "06/10/2024 19:18:12",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -529,7 +521,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 \{
 "resourceName": "customer",
 "url": "/v1/customer/id/4048556",
-"id": 4048556,\
+"id": 4048556,
 "statusDate": "05/09/2024 07:59:20",
 "portalAccess": \{
 "grantAccess": false
@@ -659,8 +651,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 15140,
-"eventType": "account.create",
+\{"id": 15140,"eventType": "account.create",
 "eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -743,8 +734,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 15140,
-"eventType": "account.update",
+\{"id": 15140,"eventType": "account.update",
 "eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -827,8 +817,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 66031067,
-"eventType": "externalaccount.create",
+\{"id": 66031067,"eventType": "externalaccount.create",
 "eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -902,8 +891,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 66031073,
-"eventType": "externalaccount.update",
+\{"id": 66031073,"eventType": "externalaccount.update",
 "eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -979,8 +967,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 * **For USD International External Account**
 
-  \{"id": 65819061,
-  "eventType": "internationalexternalaccount.create",
+  \{"id": 65819061,"eventType": "internationalexternalaccount.create",
   "eventTimeStamp": "06/21/2024 06:32:54",
   "eventId": "0001709618091430001",
   "eventCreated": 1747098180090,
@@ -1031,8 +1018,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
   * **For non- USD International External Account**
 
-    \{"id": 67856626,
-    "eventType": "internationalexternalaccount.create",
+    \{"id": 67856626,"eventType": "internationalexternalaccount.create",
     "eventTimeStamp": "06/12/2025 06:04:10",
     "eventCreated": 1749708250797,
     "eventId": "0198840000000785690001",
@@ -1094,8 +1080,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 * **For USD International External Account**
 
-  \{"id": 65819070,
-  "eventType": "internationalexternalaccount.update",
+  \{"id": 65819070,"eventType": "internationalexternalaccount.update",
   "eventTimeStamp": "06/10/2024 19:08:33",
   "eventId": "0001709618091430001",
   "eventCreated": 1747098180090,
@@ -1146,8 +1131,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
   * **For non-USD International External Account**
 
-    \{"id": 67856628,
-    "eventType": "internationalexternalaccount.update",
+    \{"id": 67856628,"eventType": "internationalexternalaccount.update",
     "eventTimeStamp": "06/12/2025 06:04:11",
     "eventCreated": 1749708251318,
     "eventId": "0198840000000838940001",
@@ -1207,8 +1191,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65833765,
-"eventType": "contact.create",
+\{"id": 65833765,"eventType": "contact.create",
 "eventTimeStamp": "06/10/2024 19:08:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -1405,8 +1388,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65833782,
-"eventType": "contact.update",
+\{"id": 65833782,"eventType": "contact.update",
 "eventTimeStamp": "06/27/2024 06:58:35",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -1603,14 +1585,12 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65819811,
-"eventType": "authorizeduser.create",
+\{"id": 65819811,"eventType": "authorizeduser.create",
 "eventTimeStamp": "06/21/2024 06:52:14",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 
-"payload": \[\{
-"resourceName": "authorizedUser",
+"payload": \[\{"resourceName": "authorizedUser",
 "url": "/v1/customer/id/4225975/authorizedUser/id/53520",
 "id": 53520,
 "firstName": "Ujjwal",
@@ -1696,14 +1676,12 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65819815,
-"eventType": "authorizeduser.update",
+\{"id": 65819815,"eventType": "authorizeduser.update",
 "eventTimeStamp": "06/21/2024 06:52:47",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
 
-"payload": \[\{
-"resourceName": "authorizedUser",
+"payload": \[\{"resourceName": "authorizedUser",
 "url": "/v1/customer/id/4225975/authorizedUser/id/53520",
 "id": 53520,
 "firstName": "Ujjwal",
@@ -1789,8 +1767,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816884,
-"eventType": "mailingaddress.create",
+\{"id": 65816884,"eventType": "mailingaddress.create",
 "eventTimeStamp": "06/21/2024 05:26:29",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -1832,8 +1809,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816882,
-"eventType": "mailingaddress.update",
+\{"id": 65816882,"eventType": "mailingaddress.update",
 "eventTimeStamp": "06/21/2024 05:26:29",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -1872,8 +1848,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816896,
-"eventType": "transaction.ach.create",
+\{"id": 65816896,"eventType": "transaction.ach.create",
 "eventTimeStamp": "06/21/2024 05:34:15",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -1937,8 +1912,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816902,
-"eventType": "transaction.ach.update",
+\{"id": 65816902,"eventType": "transaction.ach.update",
 "eventTimeStamp": "06/21/2024 05:34:44",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -2014,8 +1988,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816890,
-"eventType": "transaction.check.create",
+\{"id": 65816890,"eventType": "transaction.check.create",
 "eventTimeStamp": "06/21/2024 05:32:22",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -2110,8 +2083,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65816892,
-"eventType": "transaction.check.update",
+\{"id": 65816892,"eventType": "transaction.check.update",
 "eventTimeStamp": "06/21/2024 05:32:24",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -2210,8 +2182,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65818336,
-"eventType": "transaction.card.create",
+\{"id": 65818336,"eventType": "transaction.card.create",
 "eventTimeStamp": "06/21/2024 06:23:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -2339,8 +2310,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65818692,
-"eventType": "transaction.card.update",
+\{"id": 65818692,"eventType": "transaction.card.update",
 "eventTimeStamp": "06/21/2024 06:25:38",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -2468,8 +2438,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65817243,
-"eventType": "transaction.wire.create",
+\{"id": 65817243,"eventType": "transaction.wire.create",
 "eventTimeStamp": "06/21/2024 05:36:10",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -2527,8 +2496,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65818671,
-"eventType": "transaction.wire.update",
+\{"id": 65818671,"eventType": "transaction.wire.update",
 "eventTimeStamp": "06/21/2024 06:24:55",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -2588,8 +2556,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 * **For USD International External Account**
 
-  \{"id": 65819088,
-  "eventType": "transaction.internationalwire.create",
+  \{"id": 65819088,"eventType": "transaction.internationalwire.create",
   "eventTimeStamp": "06/21/2024 06:45:31",
   "eventId": "0001709618091430001",
   "eventCreated": 1747098180090,
@@ -2646,8 +2613,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
   * **For non - USD International External Account**
 
-    \{"id": 67863490,
-    "eventType": "transaction.internationalwire.create",
+    \{"id": 67863490,"eventType": "transaction.internationalwire.create",
     "eventId": "0201640000000584310001",
     "payload": \[
     \{
@@ -2725,8 +2691,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 * **For USD International External Account**
 
-  \{"id": 65819256,
-  "eventType": "transaction.internationalwire.update",
+  \{"id": 65819256,"eventType": "transaction.internationalwire.update",
   "eventTimeStamp": "06/21/2024 06:46:34",
   "eventId": "0001709618091430001",
   "eventCreated": 1747098180090,
@@ -2785,8 +2750,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
   * **For non-USD International External Account**
 
-    \{"id": 67863492,
-    "eventType": "transaction.internationalwire.update",
+    \{"id": 67863492,"eventType": "transaction.internationalwire.update",
     "eventId": "0201650000000303880001",
     "payload": \[
     \{
@@ -2862,8 +2826,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65835612,
-"eventType": "transaction.book.create",
+\{"id": 65835612,"eventType": "transaction.book.create",
 "eventTimeStamp": "06/28/2024 11:37:23",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -2922,8 +2885,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65835625,
-"eventType": "transaction.book.update",
+\{"id": 65835625,"eventType": "transaction.book.update",
 "eventTimeStamp": "06/28/2024 11:38:44",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -2980,8 +2942,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65819444,
-"eventType": "transaction.virtualcard.create",
+\{"id": 65819444,"eventType": "transaction.virtualcard.create",
 "eventTimeStamp": "06/21/2024 06:48:36",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -3039,8 +3000,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-\{"id": 65819800,
-"eventType": "transaction.virtualcard.update",
+\{"id": 65819800,"eventType": "transaction.virtualcard.update",
 "eventTimeStamp": "06/21/2024 06:49:33",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -3099,8 +3059,7 @@ Learn how to configure and manage webhook subscriptions in PCE, confirm your end
 
 &#x20;&#x20;
 
-For ACH transaction:\{
-"id": 67810538,
+For ACH transaction:\{"id": 67810538,
 "eventCreated": 1748425349095,
 "eventType": "ledger.create",
 "eventTimeStamp": "05/28/2025 09:42:29",
@@ -3184,8 +3143,7 @@ For Debit Card:
 
 For "Expose Debit card sensitive data" setting as TRUE
 
-\{"id": 1363188,
-"eventType": "debitcard.create",
+\{"id": 1363188,"eventType": "debitcard.create",
 "eventTimeStamp": "06/27/2024 09:36:24",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -3237,8 +3195,7 @@ For "Expose Debit card sensitive data" setting as TRUE
 
 For "Expose Debit card sensitive data" setting as FALSE
 
-\{"id": 1368698,
-"eventType": "debitcard.create",
+\{"id": 1368698,"eventType": "debitcard.create",
 "eventTimeStamp": "07/18/2024 05:38:20",
 "payload": \[
 \{
@@ -3295,8 +3252,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 1363189,
-"eventType": "debitcard.update",
+\{"id": 1363189,"eventType": "debitcard.update",
 "eventTimeStamp": "06/27/2024 09:46:13",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -3351,8 +3307,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 1368904,
-"eventType": "moneygram.deposit.initiated",
+\{"id": 1368904,"eventType": "moneygram.deposit.initiated",
 "eventTimeStamp": "07/31/2024 12:54:20",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -3371,8 +3326,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 66287814,
-"eventType": "merchant.directfunded.create",
+\{"id": 66287814,"eventType": "merchant.directfunded.create",
 "eventTimeStamp": "07/31/2024 12:32:19",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -3475,8 +3429,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 66287821,
-"eventType": "merchant.directfunded.update",
+\{"id": 66287821,"eventType": "merchant.directfunded.update",
 "eventTimeStamp": "07/31/2024 12:33:49",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -3579,8 +3532,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 66287825,
-"eventType": "merchant.payfac.create",
+\{"id": 66287825,"eventType": "merchant.payfac.create",
 "eventTimeStamp": "07/31/2024 12:37:23",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,
@@ -3664,8 +3616,7 @@ For "Expose Debit card sensitive data" setting as FALSE
 
 &#x20;&#x20;
 
-\{"id": 66287837,
-"eventType": "merchant.payfac.update",
+\{"id": 66287837,"eventType": "merchant.payfac.update",
 "eventTimeStamp": "07/31/2024 12:44:41",
 "eventId": "0001709618091430001",
 "eventCreated": 1747098180090,

@@ -29,28 +29,28 @@ PCE’s ACH capabilities let you initiate one-time and recurring bank debits, tr
 
 # Compliance / Regulation Mandates
 
-- **NACHA Operating Rules:** All ACH transactions must comply with NACHA rules for SEC codes, settlement windows, and return timelines.  
-- **Reg E (EFTA):** Provide required disclosures and error-resolution procedures for consumer debits.  
-- **OFAC & KYC/AML:** Screen all transactions against OFAC lists and perform risk-based customer due diligence.  
-- **Reg CC Funds Availability:** Adhere to cutoff and settlement timing requirements for same-day and next-day ACH.  
-- **GDPR & Data Privacy:** Protect personal and bank account data in accordance with GDPR and applicable privacy laws.  
+* **NACHA Operating Rules:** All ACH transactions must comply with NACHA rules for SEC codes, settlement windows, and return timelines.  
+* **Reg E (EFTA):** Provide required disclosures and error-resolution procedures for consumer debits.  
+* **OFAC & KYC/AML:** Screen all transactions against OFAC lists and perform risk-based customer due diligence.  
+* **Reg CC Funds Availability:** Adhere to cutoff and settlement timing requirements for same-day and next-day ACH.  
+* **GDPR & Data Privacy:** Protect personal and bank account data in accordance with GDPR and applicable privacy laws.  
 
 # Feature Table
 
-| Feature                           | Description                                                            |
-| --------------------------------- | ---------------------------------------------------------------------- |
-| ACH Debit Initiation              | Create one-time or recurring ACH debits with selectable SEC codes       |
-| Same-Day ACH                      | Submit and settle transactions within same-day processing windows       |
-| SEC Code Support                  | CCD, PPD, WEB, TEL (CTX not supported) with addenda line records       |
-| Payment Tracking                  | Query transaction status and receive webhook notifications             |
-| Modify Payments                   | Cancel or update scheduled debits before cutoff                        |
-| ACH Returns & Reversals           | Handle automated returns, reversals, and NOC workflows                 |
-| Refunds                           | Issue full and partial (multiple) refunds on settled debits            |
-| Account Validation & Verification | Instant EWS, prenotes, and micro-deposit verification                  |
-| Processing & Settlement           | Standard vs same-day ACH, cutoff times, settlement timings             |
+| Feature                           | Description                                                                         |
+| --------------------------------- | ----------------------------------------------------------------------------------- |
+| ACH Debit Initiation              | Create one-time or recurring ACH debits with selectable SEC codes                   |
+| Same-Day ACH                      | Submit and settle transactions within same-day processing windows                   |
+| SEC Code Support                  | CCD, PPD, WEB, TEL (CTX not supported) with addenda line records                    |
+| Payment Tracking                  | Query transaction status and receive webhook notifications                          |
+| Modify Payments                   | Cancel or update scheduled debits before cutoff                                     |
+| ACH Returns & Reversals           | Handle automated returns, reversals, and NOC workflows                              |
+| Refunds                           | Issue full and partial (multiple) refunds on settled debits                         |
+| Account Validation & Verification | Instant EWS, prenotes, and micro-deposit verification                               |
+| Processing & Settlement           | Standard vs same-day ACH, cutoff times, settlement timings                          |
 | Risk & Fraud Shield               | Good-funds model, approvals, velocity controls, statement descriptors, debit blocks |
-| Revenue Accelerator               | Split payouts to multiple Passport or external accounts; clearing accounts |
-| Integration Methods               | REST APIs, bulk file uploads, webhooks (incl. returns), sandbox simulator |
+| Revenue Accelerator               | Split payouts to multiple Passport or external accounts; clearing accounts          |
+| Integration Methods               | REST APIs, bulk file uploads, webhooks (incl. returns), sandbox simulator           |
 
 # Key Details
 
@@ -84,40 +84,43 @@ Issue full refunds or one-or-more partial refunds against settled debits, up to 
 
 ## Account Validation & Verification
 
-### Instant EWS Verification  
+### Instant EWS Verification
+
 Perform upfront ACH account checks via Early Warning System for immediate validation.
 
-### Prenotification (Prenote)  
+### Prenotification (Prenote)
+
 Send zero-dollar prenote transactions to verify account and routing data before live debits.
 
-### Micro-deposit Verification  
+### Micro-deposit Verification
+
 Use two-small deposits and customer confirmation to verify account ownership.
 
 ## Processing & Settlement
 
-- **Standard ACH:** Next-day settlement following NACHA batch windows.  
-- **Same-Day ACH:** Multiple intraday windows for faster settlement.  
-- **Cutoff Times:** Observe ACH network cutoff deadlines to ensure timely processing.  
-- **Automated Return Handling:** System-driven retries and notifications for common return reasons.  
-- **Notification of Change (NOC):** Accept routing/account updates via NOC events.
+* **Standard ACH:** Next-day settlement following NACHA batch windows.  
+* **Same-Day ACH:** Multiple intraday windows for faster settlement.  
+* **Cutoff Times:** Observe ACH network cutoff deadlines to ensure timely processing.  
+* **Automated Return Handling:** System-driven retries and notifications for common return reasons.  
+* **Notification of Change (NOC):** Accept routing/account updates via NOC events.
 
 ## Risk & Fraud Shield
 
-- **Good-Funds Model:** Reserve funds upon initiation to reduce NSF risk.  
-- **Payment Approvals:** Optional pre-approval flows before debit submission.  
-- **Velocity Controls:** Limit transaction counts and volumes per account or customer.  
-- **Statement Descriptors:** Customize ACH debit descriptions for clarity.  
-- **Fraud Prevention:** Leverage machine learning and rules engines.  
-- **Debit Blocks:** Automatically block debits on accounts with high return rates.
+* **Good-Funds Model:** Reserve funds upon initiation to reduce NSF risk.  
+* **Payment Approvals:** Optional pre-approval flows before debit submission.  
+* **Velocity Controls:** Limit transaction counts and volumes per account or customer.  
+* **Statement Descriptors:** Customize ACH debit descriptions for clarity.  
+* **Fraud Prevention:** Leverage machine learning and rules engines.  
+* **Debit Blocks:** Automatically block debits on accounts with high return rates.
 
 ## Revenue Accelerator
 
-- **Split Payouts:** Distribute debit proceeds across multiple Passport or external accounts based on funding rules.  
-- **Clearing Accounts:** Use dedicated clearing accounts for consolidated settlement and reconciliation.
+* **Split Payouts:** Distribute debit proceeds across multiple Passport or external accounts based on funding rules.  
+* **Clearing Accounts:** Use dedicated clearing accounts for consolidated settlement and reconciliation.
 
 ## Integration Methods
 
-- **APIs:** Full CRUD support for debits, returns, validations, and payouts.  
-- **Bulk File Uploads:** Submit NACHA-formatted files for high-volume batches.  
-- **Webhooks:** Receive real-time event notifications for creations, updates, returns, and reversals.  
-- **Sandbox Simulator:** Emulate full ACH lifecycles and failure scenarios in a safe test environment.
+* **APIs:** Full CRUD support for debits, returns, validations, and payouts.  
+* **Bulk File Uploads:** Submit NACHA-formatted files for high-volume batches.  
+* **Webhooks:** Receive real-time event notifications for creations, updates, returns, and reversals.  
+* **Sandbox Simulator:** Emulate full ACH lifecycles and failure scenarios in a safe test environment.

@@ -30,31 +30,37 @@ This page outlines PCE’s ACH Payment Core suite, empowering you to originate, 
 
 # Feature table
 
-| Feature                   | Description                                                         |
-| ------------------------- | ------------------------------------------------------------------- |
-| ACH Debit Initiation      | Originate one-off or recurring debits via REST API or NACHA files    |
-| SEC Codes                 | Classify entries with PPD, CCD, WEB or TEL codes for compliance     |
-| Addenda Records           | Attach single-line remittance details to simplify reconciliation     |
-| Modify Payments           | Update or cancel scheduled debits before the ACH cutoff             |
-| Returns & Reversals       | Handle bank-initiated returns and originator-initiated reversals     |
-| Refunds                   | Issue full or partial ACH credits to customers                      |
+| Feature              | Description                                                       |
+| -------------------- | ----------------------------------------------------------------- |
+| ACH Debit Initiation | Originate one-off or recurring debits via REST API or NACHA files |
+| SEC Codes            | Classify entries with PPD, CCD, WEB or TEL codes for compliance   |
+| Addenda Records      | Attach single-line remittance details to simplify reconciliation  |
+| Modify Payments      | Update or cancel scheduled debits before the ACH cutoff           |
+| Returns & Reversals  | Handle bank-initiated returns and originator-initiated reversals  |
+| Refunds              | Issue full or partial ACH credits to customers                    |
 
 # Key details
 
-## [ACH Debit Initiation](doc:pce-docs-ach-debit-initiation)  
+## [ACH Debit Initiation](doc:pce-docs-ach-debit-initiation)
+
 Create and schedule ACH debit entries—one-off or recurring—by referencing a verified external account. Supports next-day and same-day processing, with clear cutoff rules.
 
-## [SEC Codes](doc:pce-docs-ach-sec-codes)  
+## [SEC Codes](doc:pce-docs-ach-sec-codes)
+
 Select the correct Standard Entry Class (PPD, CCD, WEB, TEL) to define transaction type, authorization method, and return rules under Nacha.
 
-## [Addenda Records](doc:pce-docs-ach-addenda-records)  
+## [Addenda Records](doc:pce-docs-ach-addenda-records)
+
 Include a single 80-character addenda record per entry to carry invoice numbers, customer IDs, or other remittance details.
 
-## [Modify Payments](doc:pce-docs-ach-modify-payments)  
+## [Modify Payments](doc:pce-docs-ach-modify-payments)
+
 Before the ACH cutoff, update amount or purpose of a Scheduled debit or cancel it entirely; once processing begins, origination reversals must be used.
 
-## [Returns & Reversals](doc:pce-docs-ach-returns-reversal)  
+## [Returns & Reversals](doc:pce-docs-ach-returns-reversal)
+
 Automatically consume RDFI return notifications (R-codes) and initiate originator reversals within Nacha timelines to correct errors or duplicates.
 
-## [Refunds](doc:pce-docs-ach-refunds)  
+## [Refunds](doc:pce-docs-ach-refunds)
+
 Push ACH credits for full or partial refunds after settlement, with settlement times of 3–5 business days and proper trace referencing to aid reconciliation.

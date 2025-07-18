@@ -75,7 +75,7 @@ Authorize funds to place a hold, then capture later when goods ship or services 
 
 Securely tokenize and vault customer payment details to enable subscriptions, top-ups, and faster checkouts.
 
----
+***
 
 ## Card Transaction Status Lifecycle
 

@@ -44,8 +44,6 @@ The Separate Authorization & Capture workflow lets you verify payment details an
   </Card>
 </Cards>
 
-<br />
-
 # Feature Table
 
 | Feature                      | Description                                                       |

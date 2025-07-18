@@ -51,7 +51,7 @@ A **prenote** is a special ACH entry with an amount of \$0, sent solely to verif
 * **Success Criteria:** If no return message is received by the end of the second business day, treat the account as valid and proceed with live debits.
 * **Failure Handling:** Any prenote return (e.g., R03 – No Account, R04 – Invalid Account Number, R02 – Account Closed) should trigger automated alerts or require manual intervention to correct customer details.
 
-**When to Use Prenotes**
+**When to Use Prenotes**\
 Use prenotes when you need broad bank coverage and cannot rely on instant EWS verification. Ideal for B2B scenarios where a two-day setup window is acceptable and cost per check is minimal.
 
 > **Integration Tip**

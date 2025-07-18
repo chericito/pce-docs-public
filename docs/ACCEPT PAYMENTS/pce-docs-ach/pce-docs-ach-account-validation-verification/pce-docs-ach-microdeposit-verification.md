@@ -1,5 +1,5 @@
 ---
-title: Prenotification
+title: Micro Deposits
 excerpt: >-
   Confirm bank account ownership by sending two small, random test deposits that
   users verify—widely supported and reliable across all banks.

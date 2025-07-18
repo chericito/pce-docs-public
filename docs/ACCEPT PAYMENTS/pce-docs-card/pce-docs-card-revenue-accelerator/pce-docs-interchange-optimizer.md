@@ -10,28 +10,35 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
 The Interchange Optimizer feature lets merchants submit enhanced transaction details—Level 1, Level 2, and Level 3—to qualify for lower interchange rates. By providing more granular invoice, shipping, and tax information, you can reduce fees on corporate and purchase cards.
 
-**In this guide you’ll learn**
-
-* The differences between Level 1, Level 2, and Level 3 processing
-* Required data fields to qualify for each level
-* Best practices for implementing enhanced data in CARD transactions
-
-### Prerequisites & limitations
+### Prerequisites
 
 * Merchant account approved for corporate or purchase-card acceptance
 * PCE with Level 2/Level 3 data enabled in your configuration
 * Qualification ultimately determined by the card network and issuing bank
 
-# Compliance / Regulation Mandates
+### Compliance / Regulation Mandates
 
-* **PCI DSS Level 1**: All card data storage, processing, and transmission must meet PCI DSS requirements to protect cardholder data.
-* **PSD2 Strong Customer Authentication**: EU transactions require SCA under PSD2 for customer-initiated e‑commerce payments, ensuring two-factor authentication.
-* **AML & KYC**: Implement risk-based Anti-Money Laundering (AML) controls, including Customer Identification Programs (CIP), Customer Due Diligence (CDD), and Enhanced Due Diligence (EDD) to comply with global AML regulations.
-* **GDPR Data Protection**: Personal and payment data storage must adhere to GDPR principles—data minimization, explicit consent, and security-by-design—when handling EU citizen data.
+<Cards columns={4}>
+  <Card title="PCI DSS Level 1" icon="fa-shield-alt">
+    All card data handling—authorization, capture, routing, and tokenization—must comply with PCI DSS Level 1 standards to secure cardholder information.
+  </Card>
+
+  <Card title="PSD2 Strong Customer Authentication" icon="fa-mobile-alt">
+    Two-factor authentication under PSD2 is required for EU card payments initiated by customers.
+  </Card>
+
+  <Card title="AML & KYC" icon="fa-user-check">
+    Implement risk-based anti-money laundering controls and customer due diligence for card transactions, especially high-value or cross-border.
+  </Card>
+
+  <Card title="GDPR Data Protection" icon="fa-user-shield">
+    Ensure personal and payment data processed in card workflows adheres to GDPR principles, including minimization, consent, and secure handling.
+  </Card>
+</Cards>
+
+<br />
 
 # Feature table
 

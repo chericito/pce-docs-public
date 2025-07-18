@@ -47,7 +47,7 @@ When ACH transactions fail or need correcting, PCE supports two mechanisms:
 
 Despite best efforts, not all ACH transactions complete successfully. PCE supports two primary exception mechanisms: **ACH Returns** (RDFI-initiated) and **ACH Reversals** (Originator-initiated).
 
----
+***
 
 ### ACH Returns
 
@@ -71,7 +71,7 @@ An ACH return occurs when the Receiving Depository Financial Institution (RDFI) 
 * **Consumer Purpose Accounts:** RDFIs have up to **60 days** from settlement to return a consumer debit (most returns occur within 2 days).
 * **Business Purpose Accounts:** RDFIs have **24 hours** from posting to return a business-to-business debit.
 
----
+***
 
 ### ACH Reversals
 

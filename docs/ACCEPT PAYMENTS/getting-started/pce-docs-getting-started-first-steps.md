@@ -15,11 +15,13 @@ next:
 This page guides you through the initial steps to call PCE Sandbox APIs: from authentication to basic CRUD and listing workflows.
 
 ### Prerequisites
-- A provisioned PCE Sandbox account with valid API‐User credentials  
+
+* A provisioned PCE Sandbox account with valid API‐User credentials
 
 ### Limitations
-- API rate limit: 1000 requests per 10 seconds (exceeding this returns 429)
-- All API calls must be made over HTTPS; HTTP is not supported
+
+* API rate limit: 1000 requests per 10 seconds (exceeding this returns 429)
+* All API calls must be made over HTTPS; HTTP is not supported
 
 # Authentication
 
@@ -30,7 +32,7 @@ GET /v1/customer HTTP/1.1
 Host: api.sandbox.pce.example.com
 Authorization: Bearer abc123xyz
 Content-Type: application/json
-````
+```
 
 To get started:
 
@@ -39,7 +41,7 @@ To get started:
 
 > **Note:** All examples in this documentation use placeholder data.
 
-### Authentication Rules
+## Authentication Rules
 
 * **HTTPS Only:** All calls must be made over TLS; HTTP is not supported.
 * **Mandatory Header:** Every request must include `Authorization: Bearer <token>`.

@@ -30,10 +30,10 @@ Explore PCE’s authorization management toolkit, offering incremental auth, voi
 
 # Compliance / Regulation Mandates
 
-- **PCI DSS Level 1**: All card data storage, processing, and transmission must meet PCI DSS requirements to protect cardholder data.  
-- **PSD2 Strong Customer Authentication**: EU transactions require SCA under PSD2 for customer-initiated e-commerce payments, ensuring two-factor authentication.  
-- **AML & KYC**: Implement risk-based Anti-Money Laundering controls, including CIP, CDD, and EDD to comply with global AML regulations.  
-- **GDPR Data Protection**: Personal and payment data storage must adhere to GDPR principles—data minimization, explicit consent, and security-by-design—when handling EU citizen data.  
+* **PCI DSS Level 1**: All card data storage, processing, and transmission must meet PCI DSS requirements to protect cardholder data.  
+* **PSD2 Strong Customer Authentication**: EU transactions require SCA under PSD2 for customer-initiated e-commerce payments, ensuring two-factor authentication.  
+* **AML & KYC**: Implement risk-based Anti-Money Laundering controls, including CIP, CDD, and EDD to comply with global AML regulations.  
+* **GDPR Data Protection**: Personal and payment data storage must adhere to GDPR principles—data minimization, explicit consent, and security-by-design—when handling EU citizen data.  
 
 # Feature Table
 

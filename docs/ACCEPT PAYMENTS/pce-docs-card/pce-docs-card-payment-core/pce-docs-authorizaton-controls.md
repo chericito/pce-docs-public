@@ -73,7 +73,7 @@ Cancel an existing authorization that hasn’t been captured to release held fun
 1. Identify the original authorization ID.
 2. Send a void request referencing that authorization.
 
-**API References**
+##
 
 * [Void Transaction](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-void-transaction)
 * [Void Capture](https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-capture-transaction#e-void-capture)

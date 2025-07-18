@@ -71,11 +71,12 @@ Use **HTTP POST** to create any entity.
 Use **HTTP POST** to update an existing entity.
 
 * **Success:** `204 No Content`
-* **Notes:**
 
-  1. Include only the fields you wish to change.
-  2. To delete a non-mandatory field, pass its value as `null`.
-  3. To remove an associated object, use the delink API endpoint.
+> **Notes:**
+>
+> * Include only the fields you wish to change.
+> * To delete a non-mandatory field, pass its value as `null`.
+> * To remove an associated object, use the delink API endpoint.
 
 ## Retrieve Entities
 

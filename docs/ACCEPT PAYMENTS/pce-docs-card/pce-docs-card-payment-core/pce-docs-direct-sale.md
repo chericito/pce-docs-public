@@ -387,9 +387,3 @@ Use this method when you want a fast, one-step payment flow that immediately set
     "purpose": "test ekam"
 }
 ```
-
-
-<br />
-
-* <Anchor label="Create Transaction API Reference" target="_blank" href="https://documentation.prioritypassport.com/passport-docs/v3.0.0/docs/doc-create-transaction">Create Transaction API Reference</Anchor>
-* [API Guide: Transaction entity (CARD method)](https://documentation.prioritypassport.com/passport-docs/v2.0.0/docs/pm-entities)

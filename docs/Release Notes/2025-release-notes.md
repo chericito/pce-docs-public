@@ -10,6 +10,7 @@ metadata:
 next:
   description: ''
 ---
+<HTMLBlock>{`
 <style>
   table{
       background: none!important;
@@ -118,7 +119,7 @@ a{color: blue;}
   }
 
 </style>
-
+`}</HTMLBlock>
 
 <div class="container">
   <div class='row'>
@@ -289,7 +290,6 @@ a{color: blue;}
 
 [Read more about this release ->](doc:v2-57-release-notes-may-26-2025)
 
-
 <div class="container">
   <div class='row'>
     <div class="col-1">
@@ -399,8 +399,6 @@ a{color: blue;}
 
 [Read more about this release ->](doc:v2-56-release-notes-apr-28-2025)
 
-
-
 <div class="container">
   <div class='row'>
     <div class="col-1">
@@ -467,9 +465,6 @@ a{color: blue;}
 <br>
 
 [Read more about this release ->](doc:v2-55-release-notes-mar-31-2025)
-
-
-
 
 <div class="container">
   <div class='row'>

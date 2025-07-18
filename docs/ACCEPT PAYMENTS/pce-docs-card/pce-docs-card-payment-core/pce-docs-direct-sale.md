@@ -53,6 +53,11 @@ Use this method when you want a fast, one-step payment flow that immediately set
 
 # Payloads
 
+> 📘 POST /v1/transaction HTTP/1.1 &#x20;
+> Host: \<hostname>
+> Authorization: Bearer
+> Content-Type: application/json
+
 ## From Third-party to PCE Account - One-Time Transaction
 
 ```json

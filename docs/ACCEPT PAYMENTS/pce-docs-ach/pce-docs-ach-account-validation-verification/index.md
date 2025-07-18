@@ -1,5 +1,5 @@
 ---
-title: 'ACH: Account Validation and Verification'
+title: Account Validation and Verification
 excerpt: >-
   Ensure bank account accuracy and reduce return risk with PCE’s robust
   validation methods: instant EWS, prenotes, and micro-deposits.

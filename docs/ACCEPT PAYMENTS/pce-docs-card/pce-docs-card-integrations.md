@@ -23,8 +23,6 @@ This page guides you through connecting your platform to PCE’s APIs, handling 
 
 * Sandbox data is isolated—do not import live customer or transaction data
 
-<br />
-
 <Cards columns={3}>
   <Card title="Integration Methods" href="doc:integration-methods" icon="fa-code">
     Learn how to embed PCE’s JavaScript SDK for card encryption, collect sensitive data securely in the browser, and exchange it for payment tokens—minimizing your PCI scope.

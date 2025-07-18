@@ -38,25 +38,11 @@ The Interchange Optimizer feature lets merchants submit enhanced transaction det
   </Card>
 </Cards>
 
-<br />
-
-# Feature table
-
-| Feature            | Description                                                            |
-| ------------------ | ---------------------------------------------------------------------- |
-| Level 1 Processing | Basic card transactions with standard interchange fees                 |
-| Level 2 Processing | Submit billing and purchase-order fields to lower corporate rates      |
-| Level 3 Processing | Include full line-item, tax, shipping, and duty details for best rates |
-
-# Key details
-
-Merchants can improve interchange pricing by supplying additional fields in CARD transactions:
-
-## Level 1 Processing
+# Level 1 Processing
 
 Basic transaction data: card number, expiration, amount, and merchant descriptor. This is the default and requires the least information.
 
-## Level 2 Processing
+# Level 2 Processing
 
 Adds mid-level details to qualify for corporate rates:
 
@@ -66,7 +52,7 @@ Adds mid-level details to qualify for corporate rates:
 
 > *Level 2 submissions typically reduce fees on corporate and purchase cards when accepted by networks.*
 
-## Level 3 Processing
+# Level 3 Processing
 
 Requires comprehensive, line-item data for the lowest interchange rates:
 
